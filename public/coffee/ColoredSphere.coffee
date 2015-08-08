@@ -1,6 +1,7 @@
 FamousEngine = require 'famous/core/FamousEngine'
 Node = require 'famous/core/Node'
 Physics = require 'famous/physics'
+DOMElement = require 'famous/dom-renderables/DOMElement'
 Sphere = require 'famous/physics/bodies/Sphere'
 Spring = Physics.Spring
 Vec3 = require 'famous/math/Vec3'
@@ -10,21 +11,14 @@ Mesh = require 'famous/webgl-renderables/Mesh'
 
 class ColoredSphere extends Node
 
-  constructor: (@node)->
+  constructor: ()->
     super
     #add a physics simulation
-    @.node
-      .setOrigin .5, .5, 0
+    @.setOrigin .5, .5, 0
       .setMountPoint .5, .5, .5
       .setAlign .5 , .5 , .5
       .setSizeMode 'absolute', 'absolute', 'absolute'
       .setAbsoluteSize 100, 100, 100
-      .addUIEvent 'click'
-      .addComponent
-        onRecieve: ()=>
-          console.log "Recieved event"
-          that.onEventRecieved()
-
 
     @.simulation = new Physics.PhysicsEngine()
     anchor = @.anchor = new Vec3(0,0,1)
@@ -37,8 +31,13 @@ class ColoredSphere extends Node
     
     @.simulation.add @.sphere, @.spring
 
-    @.mesh = new Mesh(@.node).setGeometry "GeodesicSphere"
+    @.mesh = new Mesh(@).setGeometry "GeodesicSphere"
+
+    @.addUIEvent 'click'
+    @.addUIEvent 'mouseover'
+
     FamousEngine.requestUpdate(@)
+
     @
 
   setColor: (color)->
@@ -58,7 +57,7 @@ class ColoredSphere extends Node
     transform = @.simulation.getTransform @.sphere
     p = transform.position
     r = transform.rotation
-    @.node.setPosition p[0], p[1], p[2]
+    @.setPosition p[0], p[1], p[2]
 
     FamousEngine.requestUpdateOnNextTick @
     @
