@@ -20,7 +20,7 @@ class App
       @.CHAOS, @.ORDERED, @.SYNCHRONIZED
     ]
 
-    @.DANCE_NUMBER = 0
+    @.DANCE_NUMBER = 1
     @.switchChoreography()
     
   switchChoreography: ()->

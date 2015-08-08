@@ -1,20 +1,20 @@
 FamousEngine = require 'famous/core/FamousEngine'
+DOMElement = require 'famous/dom-renderables/DOMElement'
 Node = require 'famous/core/Node'
 Vec3 = require 'famous/math/Vec3'
 Lib = require './lib/lib.coffee'
 App = require './App.coffee'
 
 class SpinnerNode extends Node
-  constructor: (@node)->
+  constructor: ()->
     super
 
-    that = @
-    @.node
-      .setOrigin .5, .5, .5
+    @.setOrigin .5, .5, .5
       .setMountPoint .5, .5, .5
       .setAlign .5 , .5 , .5
       
     rand = Math.random()
+
     @.d = new Vec3 Lib.getDirection(), Lib.getDirection(), Lib.getDirection()
     @.m = new Vec3 Math.random(), Math.random(), Math.random()
     @.m.scale(.001)
@@ -28,6 +28,8 @@ class SpinnerNode extends Node
     else
       @.axis = new Vec3 0, 0, 1
 
+
+    @.addUIEvent 'click'
     FamousEngine.requestUpdate(@)
 
   onUpdate: (time)=>
@@ -36,13 +38,13 @@ class SpinnerNode extends Node
       x = @.cross.x * @.axis.x * time
       y = @.cross.y * @.axis.y * time
       z = @.cross.z * @.axis.z * time
-      @.node.setRotation x, y, z
+      @.setRotation x, y, z
 
     setChaos = ()=>
-      @.node.setRotation @.cross.x * time, @.cross.y * time, @.cross.z * time
+      @.setRotation @.cross.x * time, @.cross.y * time, @.cross.z * time
 
     setSynchronous = ()=>
-      @.node.setRotation time * 0.001, time * 0.002, time * 0.001
+      @.setRotation time * 0.001, time * 0.002, time * 0.001
 
     switch App.CHOREOGRAPHY
       when App.SYNCHRONIZED then setSynchronous()
@@ -51,12 +53,9 @@ class SpinnerNode extends Node
 
     FamousEngine.requestUpdateOnNextTick @
 
-  onEventRecieved: (e, payload) ->
-    console.log "SPINNER recieved an event"
-    console.log e
-    console.log payload
-
+  onReceive: (e, payload) ->
     if e == "click"
+      console.log "Switching the choreography"
       App.switchChoreography()
 
 module.exports = SpinnerNode
