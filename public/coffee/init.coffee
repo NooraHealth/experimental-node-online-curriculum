@@ -1,4 +1,5 @@
 FamousEngine = require 'famous/core/FamousEngine'
+Dispatch = require 'famous/core/Dispatch'
 Node = require 'famous/core/Node'
 Camera = require 'famous/components/Camera'
 Color = require 'famous/utilities/Color'
@@ -9,16 +10,19 @@ AmbientLight  = require 'famous/webgl-renderables/lights/AmbientLight'
 App = require './App.coffee'
 SpinnerNode = require './SpinnerNode.coffee'
 ColoredSphere = require './ColoredSphere.coffee'
+Header = require './Header.coffee'
 
 FamousEngine.init()
 
 scene = FamousEngine.createScene "body"
+root = scene.addChild()
 
 #camera for perspective
 camera = new Camera scene
 camera.setDepth 1000
 
-root = scene.addChild()
+header = new Header()
+root.addChild header
 
 #light
 lightnode = scene.addChild()
@@ -41,10 +45,12 @@ while i < App.NUM_SPHERES
   sphere = new ColoredSphere()
     .setColor App.COLORS[i]
 
-  scene.addChild(spinner)
+  root.addChild(spinner)
   spinner.addChild(sphere)
 
   sphere.choreograph()
 
   i++
 
+document.addEventListener "click" , ()->
+  root.emit "click"

@@ -25,7 +25,7 @@ class App
     
   switchChoreography: ()->
     @.CHOREOGRAPHY = @.DANCES[@.DANCE_NUMBER]
-    @.DANCE_NUMBER = @.DANCE_NUMBER++ %% @.DANCES.length
+    @.DANCE_NUMBER = ++@.DANCE_NUMBER %% @.DANCES.length
 
 app = new App()
 
