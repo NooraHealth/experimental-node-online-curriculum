@@ -18,6 +18,9 @@ class Header extends Node
     logo = @.logo = new Logo()
     @.addChild logo
 
+#class Logo extends Node
+  #constructor: ()->
+
 class Logo extends Node
 
   constructor: ()->
