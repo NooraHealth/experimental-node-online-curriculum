@@ -25404,7 +25404,7 @@ App = (function() {
 
   App.prototype.switchChoreography = function() {
     this.CHOREOGRAPHY = this.DANCES[this.DANCE_NUMBER];
-    return this.DANCE_NUMBER = modulo(this.DANCE_NUMBER++, this.DANCES.length);
+    return this.DANCE_NUMBER = modulo(++this.DANCE_NUMBER, this.DANCES.length);
   };
 
   return App;
@@ -25450,7 +25450,7 @@ ColoredSphere = (function(superClass) {
     this.choreograph = bind(this.choreograph, this);
     var anchor, sphere, spring;
     ColoredSphere.__super__.constructor.apply(this, arguments);
-    this.setOrigin(.5, .5, 0).setMountPoint(.5, .5, .5).setAlign(.5, .5, .5).setSizeMode('absolute', 'absolute', 'absolute').setAbsoluteSize(100, 100, 100);
+    this.setOrigin(.5, .5, 0).setMountPoint(.5, .5, .5).setAlign(.5, .5, .5).setSizeMode('absolute', 'absolute', 'absolute').setAbsoluteSize(50, 50, 50);
     this.simulation = new Physics.PhysicsEngine();
     anchor = this.anchor = new Vec3(0, 0, 1);
     sphere = this.sphere = new Sphere({
@@ -25503,7 +25503,134 @@ ColoredSphere = (function(superClass) {
 module.exports = ColoredSphere;
 
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee":[function(require,module,exports){
+},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee":[function(require,module,exports){
+var App, Box, DOMElement, FamousEngine, Header, Lib, Logo, Mesh, Node, Physics, Quaternion, RotationalDrag, RotationalSpring, Spring, Vec3,
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty,
+  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+FamousEngine = require('famous/core/FamousEngine');
+
+Node = require('famous/core/Node');
+
+Physics = require('famous/physics');
+
+DOMElement = require('famous/dom-renderables/DOMElement');
+
+Box = require('famous/physics/bodies/Box');
+
+Spring = Physics.Spring;
+
+Vec3 = require('famous/math/Vec3');
+
+Lib = require('./lib/lib.coffee');
+
+App = require('./App.coffee');
+
+Mesh = require('famous/webgl-renderables/Mesh');
+
+RotationalSpring = require('famous/physics/forces/RotationalSpring');
+
+RotationalDrag = require('famous/physics/forces/RotationalDrag');
+
+Quaternion = require('famous/math/Quaternion');
+
+Header = (function(superClass) {
+  extend(Header, superClass);
+
+  function Header() {
+    var logo;
+    Header.__super__.constructor.apply(this, arguments);
+    logo = this.logo = new Logo();
+    this.addChild(logo);
+  }
+
+  return Header;
+
+})(Node);
+
+Logo = (function(superClass) {
+  extend(Logo, superClass);
+
+  function Logo() {
+    this.onUpdate = bind(this.onUpdate, this);
+    this.onReceive = bind(this.onReceive, this);
+    var anchor, box, quaternion, rotationalDrag, rotationalSpring, spring;
+    Logo.__super__.constructor.apply(this, arguments);
+    this.margin = 400;
+    this.setOrigin(.5, .5, 0).setMountPoint(.5, .5, 0).setAlign(0.07, .05, 0).setSizeMode('absolute', 'absolute', 'relative').setAbsoluteSize(70, 70).setProportionalSize(1, 1, 1);
+    this.simulation = new Physics.PhysicsEngine();
+    anchor = this.anchor = new Vec3(-1, 0, 0);
+    box = this.box = new Box({
+      mass: 100,
+      size: [70, 70, 70]
+    });
+    spring = this.spring = new Spring(null, box, {
+      period: 1,
+      dampingRatio: 1,
+      anchor: anchor
+    });
+    quaternion = this.quaternion = new Quaternion().fromEuler(.25 * Math.PI, -1 / 2 * Math.PI, 0);
+    rotationalSpring = this.rotationalSpring = new RotationalSpring(null, box, {
+      period: .5,
+      dampingRatio: .5,
+      anchor: quaternion
+    });
+    rotationalDrag = this.rotationalDrag = new RotationalDrag(box, {
+      strength: 5,
+      anchor: quaternion
+    });
+    this.simulation.add(box, spring, rotationalSpring);
+    this.domElement = new DOMElement(this, {
+      properties: {
+        "color": "white",
+        "width": "100%"
+      },
+      attributes: {
+        "class": "valign-wrapper z-depth-2 logo"
+      },
+      content: "<img src='images/NHlogo.png' class='valign align-right'/>"
+    });
+    this.addUIEvent("click");
+    this.addUIEvent("mouseover");
+  }
+
+  Logo.prototype.enter = function() {
+    this.anchor.set(1, 0, 0);
+    return this.quaternion.set(1, 0, 0, 0);
+  };
+
+  Logo.prototype.onReceive = function(e, payload) {
+    if (e === "click") {
+      console.log("A click has been received");
+      this.enter();
+      console.log(this.anchor);
+    }
+    if (e === "mouseover") {
+      return console.log("Mouseover!");
+    }
+  };
+
+  Logo.prototype.onUpdate = function(time) {
+    var p, r, transform;
+    this.simulation.update(time);
+    transform = this.simulation.getTransform(this.box);
+    p = transform.position;
+    r = transform.rotation;
+    this.setPosition(p[0], 0, 0);
+    this.setRotation(r[0], r[1], r[2], r[3]);
+    FamousEngine.requestUpdateOnNextTick(this);
+    return this;
+  };
+
+  return Logo;
+
+})(Node);
+
+module.exports = Header;
+
+
+},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Quaternion":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Quaternion.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Box":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Box.js","famous/physics/forces/RotationalDrag":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalDrag.js","famous/physics/forces/RotationalSpring":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalSpring.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee":[function(require,module,exports){
 var App, DOMElement, FamousEngine, Lib, Node, SpinnerNode, Vec3,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -25595,9 +25722,11 @@ module.exports = SpinnerNode;
 
 
 },{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee":[function(require,module,exports){
-var AmbientLight, App, Camera, Collision, Color, ColoredSphere, DOMElement, FamousEngine, Node, PointLight, SpinnerNode, ambience, ambientColor, ambientLight, camera, i, lightnode, pntLight, root, scene, sphere, spinner;
+var AmbientLight, App, Camera, Collision, Color, ColoredSphere, DOMElement, Dispatch, FamousEngine, Header, Node, PointLight, SpinnerNode, ambience, ambientColor, ambientLight, camera, header, i, lightnode, pntLight, root, scene, sphere, spinner;
 
 FamousEngine = require('famous/core/FamousEngine');
+
+Dispatch = require('famous/core/Dispatch');
 
 Node = require('famous/core/Node');
 
@@ -25619,15 +25748,21 @@ SpinnerNode = require('./SpinnerNode.coffee');
 
 ColoredSphere = require('./ColoredSphere.coffee');
 
+Header = require('./Header.coffee');
+
 FamousEngine.init();
 
 scene = FamousEngine.createScene("body");
+
+root = scene.addChild();
 
 camera = new Camera(scene);
 
 camera.setDepth(1000);
 
-root = scene.addChild();
+header = new Header();
+
+root.addChild(header);
 
 lightnode = scene.addChild().setAlign(.5, .5, .5).setPosition(0, 0, 250);
 
@@ -25644,14 +25779,18 @@ i = 0;
 while (i < App.NUM_SPHERES) {
   spinner = new SpinnerNode();
   sphere = new ColoredSphere().setColor(App.COLORS[i]);
-  scene.addChild(spinner);
+  root.addChild(spinner);
   spinner.addChild(sphere);
   sphere.choreograph();
   i++;
 }
 
+document.addEventListener("click", function() {
+  return root.emit("click");
+});
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./ColoredSphere.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","./SpinnerNode.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","famous/components/Camera":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/components/Camera.js","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/physics/constraints/Collision":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/constraints/Collision.js","famous/utilities/Color":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/utilities/Color.js","famous/webgl-renderables/lights/AmbientLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/AmbientLight.js","famous/webgl-renderables/lights/PointLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/PointLight.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee":[function(require,module,exports){
+
+},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./ColoredSphere.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","./Header.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee","./SpinnerNode.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","famous/components/Camera":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/components/Camera.js","famous/core/Dispatch":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Dispatch.js","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/physics/constraints/Collision":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/constraints/Collision.js","famous/utilities/Color":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/utilities/Color.js","famous/webgl-renderables/lights/AmbientLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/AmbientLight.js","famous/webgl-renderables/lights/PointLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/PointLight.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee":[function(require,module,exports){
 var lib;
 
 lib = {
@@ -25667,4 +25806,4 @@ lib = {
 module.exports = lib;
 
 
-},{}]},{},["/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee"]);
+},{}]},{},["/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee"]);

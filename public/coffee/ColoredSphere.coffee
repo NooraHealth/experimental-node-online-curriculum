@@ -18,7 +18,7 @@ class ColoredSphere extends Node
       .setMountPoint .5, .5, .5
       .setAlign .5 , .5 , .5
       .setSizeMode 'absolute', 'absolute', 'absolute'
-      .setAbsoluteSize 100, 100, 100
+      .setAbsoluteSize 50, 50, 50
 
     @.simulation = new Physics.PhysicsEngine()
     anchor = @.anchor = new Vec3(0,0,1)
