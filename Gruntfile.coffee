@@ -59,7 +59,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-clean'
 
-  grunt.registerTask 'default', ['sass', 'browserify', 'nodemon']
+  grunt.registerTask 'default', ['sass', 'browserify', 'env:dev', 'nodemon']
   grunt.registerTask 'production', ['env:prod', 'nodemon']
   grunt.registerTask 'build:dev', ['env:dev']
   grunt.registerTask 'build:prod', ['env:prod']

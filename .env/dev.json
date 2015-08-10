@@ -1,4 +1,6 @@
 {
-  "env": "development"
-  "PORT":"3000"
+  "MONGO_URL":"mongodb://lucy:artichokes@c312.lighthouse.2.mongolayer.com:10312,lighthouse.3.mongolayer.com:10311/dev?replicaSet=set-555b94436b0733dec5001b44", 
+  "HOST":"localhost:3000",
+  "NODE_ENV":"dev",
+  "PORT": 3000
 }

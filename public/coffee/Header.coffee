@@ -1,6 +1,7 @@
 FamousEngine = require 'famous/core/FamousEngine'
 Node = require 'famous/core/Node'
 Physics = require 'famous/physics'
+Transitionable = require 'famous/transitions/Transitionable'
 DOMElement = require 'famous/dom-renderables/DOMElement'
 Box = require 'famous/physics/bodies/Box'
 Spring = Physics.Spring
@@ -18,80 +19,125 @@ class Header extends Node
     logo = @.logo = new Logo()
     @.addChild logo
 
-#class Logo extends Node
-  #constructor: ()->
+    @.addUIEvent "mouseenter"
+    @.addUIEvent "mouseout"
+    @.addUIEvent "mouseover"
 
 class Logo extends Node
 
   constructor: ()->
     super
-    @.margin = 400
+    parent = new Node()
+    @.sizeTransitionable = new Transitionable(0)
 
     @.setOrigin .5, .5, 0
-      .setMountPoint .5, .5, 0
-      .setAlign 0.07, .05, 0
+      .setMountPoint 0, .5, 0
+      .setAlign -0.05, .05, 0
       .setSizeMode 'absolute', 'absolute', 'relative'
-      .setAbsoluteSize 70, 70
+      .setAbsoluteSize 270, 70
       .setProportionalSize 1, 1,  1
 
-    @.simulation = new Physics.PhysicsEngine()
-    anchor = @.anchor = new Vec3( -1, 0, 0 )
-    box = @.box = new Box({mass: 100, size: [ 70, 70 , 70]})
-    spring = @.spring = new Spring null , box, {
-      period: 1,
-      dampingRatio: 1,
-      anchor: anchor
-    }
-
-    quaternion = @.quaternion = new Quaternion().fromEuler .25 * Math.PI , -1/2 * Math.PI, 0
-    rotationalSpring = @.rotationalSpring = new RotationalSpring null, box, {
-      period: .5,
-      dampingRatio: .5,
-      anchor: quaternion
-    }
-
-    rotationalDrag = @.rotationalDrag = new RotationalDrag box, {
-      strength: 5,
-      anchor: quaternion
-    }
-    
-    @.simulation.add box, spring, rotationalSpring
     @.domElement = new DOMElement @ , {
       properties: {
         "color":"white"
         "width": "100%"
       }
       attributes: {
-        class: "valign-wrapper z-depth-2 logo"
+        class: "valign-wrapper z-depth-2 header"
       }
-      content: "<img src='images/NHlogo.png' class='valign align-right'/>"
+      content: "<img src='images/NHlogo.png' class='logo valign align-right'/>"
     }
 
-    @.addUIEvent "click"
+    @.addUIEvent "mouseenter"
+    @.addUIEvent "mouseout"
     @.addUIEvent "mouseover"
 
-  enter: ()->
-    @.anchor.set 1, 0, 0
-    @.quaternion.set 1, 0, 0, 0
+  onReceive: (e, payload)=>
+    if e == "mouseenter"
+      console.log "Mouseenter"
+      @.sizeTransitionable.to 1, "easeIn", 500, ()-> console.log "DONE"
+      FamousEngine.requestUpdateOnNextTick @
 
-  onReceive: (e, payload) =>
-    if e == "click"
-      console.log "A click has been received"
-      @.enter()
-      console.log @.anchor
-    if e == "mouseover"
-      console.log "Mouseover!"
+    if e == "mouseout"
+      console.log "Mouse out"
+      @.sizeTransitionable.to 0, "easeOut", 500, ()-> console.log "DONE"
+      FamousEngine.requestUpdateOnNextTick @
 
-  onUpdate:  (time) =>
-    @.simulation.update time
-    transform = @.simulation.getTransform @.box
-    p = transform.position
-    r = transform.rotation
 
-    @.setPosition p[0], 0, 0
-    @.setRotation r[0], r[1], r[2], r[3]
+  onUpdate: ()->
+    @.setAbsoluteSize @.sizeTransitionable.get()*100 + 200
 
-    FamousEngine.requestUpdateOnNextTick @
-    @
+#class Logo extends Node
+
+  #constructor: ()->
+    #super
+    #@.margin = 400
+
+    #@.setOrigin .5, .5, 0
+      #.setMountPoint .5, .5, 0
+      #.setAlign 0.07, .05, 0
+      #.setSizeMode 'absolute', 'absolute', 'relative'
+      #.setAbsoluteSize 70, 70
+      #.setProportionalSize 1, 1,  1
+
+    #@.simulation = new Physics.PhysicsEngine()
+    #anchor = @.anchor = new Vec3( -1, 0, 0 )
+    #box = @.box = new Box({mass: 100, size: [ 70, 70 , 70]})
+    #spring = @.spring = new Spring null , box, {
+      #period: 1,
+      #dampingRatio: 1,
+      #anchor: anchor
+    #}
+
+    #quaternion = @.quaternion = new Quaternion().fromEuler .25 * Math.PI , -1/2 * Math.PI, 0
+    #rotationalSpring = @.rotationalSpring = new RotationalSpring null, box, {
+      #period: .5,
+      #dampingRatio: .5,
+      #anchor: quaternion
+    #}
+
+    #rotationalDrag = @.rotationalDrag = new RotationalDrag box, {
+      #strength: 5,
+      #anchor: quaternion
+    #}
+    
+    #@.simulation.add box, spring, rotationalSpring
+    #@.domElement = new DOMElement @ , {
+      #properties: {
+        #"color":"white"
+        #"width": "100%"
+      #}
+      #attributes: {
+        #class: "valign-wrapper z-depth-2 logo"
+      #}
+      #content: "<img src='images/NHlogo.png' class='valign align-right'/>"
+    #}
+
+    #@.addUIEvent "click"
+    #@.addUIEvent "mouseover"
+
+  #enter: ()->
+    #@.anchor.set 1, 0, 0
+    #@.quaternion.set 1, 0, 0, 0
+
+  #onReceive: (e, payload) =>
+    #if e == "click"
+      #console.log "A click has been received"
+      #@.enter()
+      #console.log @.anchor
+    #if e == "mouseover"
+      #console.log "Mouseover!"
+
+  #onUpdate:  (time) =>
+    #@.simulation.update time
+    #transform = @.simulation.getTransform @.box
+    #p = transform.position
+    #r = transform.rotation
+
+    #@.setPosition p[0], 0, 0
+    #@.setRotation r[0], r[1], r[2], r[3]
+
+    #FamousEngine.requestUpdateOnNextTick @
+    #@
 
 module.exports = Header

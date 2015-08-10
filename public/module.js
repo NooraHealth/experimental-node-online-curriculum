@@ -25504,7 +25504,7 @@ module.exports = ColoredSphere;
 
 
 },{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee":[function(require,module,exports){
-var App, Box, DOMElement, FamousEngine, Header, Lib, Logo, Mesh, Node, Physics, Quaternion, RotationalDrag, RotationalSpring, Spring, Vec3,
+var App, Box, DOMElement, FamousEngine, Header, Lib, Logo, Mesh, Node, Physics, Quaternion, RotationalDrag, RotationalSpring, Spring, Transitionable, Vec3,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
@@ -25514,6 +25514,8 @@ FamousEngine = require('famous/core/FamousEngine');
 Node = require('famous/core/Node');
 
 Physics = require('famous/physics');
+
+Transitionable = require('famous/transitions/Transitionable');
 
 DOMElement = require('famous/dom-renderables/DOMElement');
 
@@ -25543,6 +25545,9 @@ Header = (function(superClass) {
     Header.__super__.constructor.apply(this, arguments);
     logo = this.logo = new Logo();
     this.addChild(logo);
+    this.addUIEvent("mouseenter");
+    this.addUIEvent("mouseout");
+    this.addUIEvent("mouseover");
   }
 
   return Header;
@@ -25553,74 +25558,46 @@ Logo = (function(superClass) {
   extend(Logo, superClass);
 
   function Logo() {
-    this.onUpdate = bind(this.onUpdate, this);
     this.onReceive = bind(this.onReceive, this);
-    var anchor, box, quaternion, rotationalDrag, rotationalSpring, spring;
+    var parent;
     Logo.__super__.constructor.apply(this, arguments);
-    this.margin = 400;
-    this.setOrigin(.5, .5, 0).setMountPoint(.5, .5, 0).setAlign(0.07, .05, 0).setSizeMode('absolute', 'absolute', 'relative').setAbsoluteSize(70, 70).setProportionalSize(1, 1, 1);
-    this.simulation = new Physics.PhysicsEngine();
-    anchor = this.anchor = new Vec3(-1, 0, 0);
-    box = this.box = new Box({
-      mass: 100,
-      size: [70, 70, 70]
-    });
-    spring = this.spring = new Spring(null, box, {
-      period: 1,
-      dampingRatio: 1,
-      anchor: anchor
-    });
-    quaternion = this.quaternion = new Quaternion().fromEuler(.25 * Math.PI, -1 / 2 * Math.PI, 0);
-    rotationalSpring = this.rotationalSpring = new RotationalSpring(null, box, {
-      period: .5,
-      dampingRatio: .5,
-      anchor: quaternion
-    });
-    rotationalDrag = this.rotationalDrag = new RotationalDrag(box, {
-      strength: 5,
-      anchor: quaternion
-    });
-    this.simulation.add(box, spring, rotationalSpring);
+    parent = new Node();
+    this.sizeTransitionable = new Transitionable(0);
+    this.setOrigin(.5, .5, 0).setMountPoint(0, .5, 0).setAlign(-0.05, .05, 0).setSizeMode('absolute', 'absolute', 'relative').setAbsoluteSize(270, 70).setProportionalSize(1, 1, 1);
     this.domElement = new DOMElement(this, {
       properties: {
         "color": "white",
         "width": "100%"
       },
       attributes: {
-        "class": "valign-wrapper z-depth-2 logo"
+        "class": "valign-wrapper z-depth-2 header"
       },
-      content: "<img src='images/NHlogo.png' class='valign align-right'/>"
+      content: "<img src='images/NHlogo.png' class='logo valign align-right'/>"
     });
-    this.addUIEvent("click");
+    this.addUIEvent("mouseenter");
+    this.addUIEvent("mouseout");
     this.addUIEvent("mouseover");
   }
 
-  Logo.prototype.enter = function() {
-    this.anchor.set(1, 0, 0);
-    return this.quaternion.set(1, 0, 0, 0);
-  };
-
   Logo.prototype.onReceive = function(e, payload) {
-    if (e === "click") {
-      console.log("A click has been received");
-      this.enter();
-      console.log(this.anchor);
+    if (e === "mouseenter") {
+      console.log("Mouseenter");
+      this.sizeTransitionable.to(1, "easeIn", 500, function() {
+        return console.log("DONE");
+      });
+      FamousEngine.requestUpdateOnNextTick(this);
     }
-    if (e === "mouseover") {
-      return console.log("Mouseover!");
+    if (e === "mouseout") {
+      console.log("Mouse out");
+      this.sizeTransitionable.to(0, "easeOut", 500, function() {
+        return console.log("DONE");
+      });
+      return FamousEngine.requestUpdateOnNextTick(this);
     }
   };
 
-  Logo.prototype.onUpdate = function(time) {
-    var p, r, transform;
-    this.simulation.update(time);
-    transform = this.simulation.getTransform(this.box);
-    p = transform.position;
-    r = transform.rotation;
-    this.setPosition(p[0], 0, 0);
-    this.setRotation(r[0], r[1], r[2], r[3]);
-    FamousEngine.requestUpdateOnNextTick(this);
-    return this;
+  Logo.prototype.onUpdate = function() {
+    return this.setAbsoluteSize(this.sizeTransitionable.get() * 100 + 200);
   };
 
   return Logo;
@@ -25630,7 +25607,7 @@ Logo = (function(superClass) {
 module.exports = Header;
 
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Quaternion":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Quaternion.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Box":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Box.js","famous/physics/forces/RotationalDrag":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalDrag.js","famous/physics/forces/RotationalSpring":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalSpring.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee":[function(require,module,exports){
+},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Quaternion":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Quaternion.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Box":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Box.js","famous/physics/forces/RotationalDrag":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalDrag.js","famous/physics/forces/RotationalSpring":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalSpring.js","famous/transitions/Transitionable":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/transitions/Transitionable.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee":[function(require,module,exports){
 var App, DOMElement, FamousEngine, Lib, Node, SpinnerNode, Vec3,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -25721,7 +25698,46 @@ SpinnerNode = (function(superClass) {
 module.exports = SpinnerNode;
 
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee":[function(require,module,exports){
+},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/LessonController.coffee":[function(require,module,exports){
+var App, DOMElement, FamousEngine, LessonController, LessonModel, Lib, Node, Physics, Sphere, Spring, Vec3, lc,
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
+
+FamousEngine = require('famous/core/FamousEngine');
+
+Node = require('famous/core/Node');
+
+Physics = require('famous/physics');
+
+DOMElement = require('famous/dom-renderables/DOMElement');
+
+Sphere = require('famous/physics/bodies/Sphere');
+
+Spring = Physics.Spring;
+
+Vec3 = require('famous/math/Vec3');
+
+Lib = require('../lib/lib.coffee');
+
+App = require('../App.coffee');
+
+LessonModel = require('../models/LessonModel.coffee');
+
+LessonController = (function(superClass) {
+  extend(LessonController, superClass);
+
+  function LessonController() {}
+
+  return LessonController;
+
+})(Node);
+
+lc = new LessonController();
+
+module.exports = lc;
+
+
+},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","../models/LessonModel.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/models/LessonModel.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee":[function(require,module,exports){
 var AmbientLight, App, Camera, Collision, Color, ColoredSphere, DOMElement, Dispatch, FamousEngine, Header, Node, PointLight, SpinnerNode, ambience, ambientColor, ambientLight, camera, header, i, lightnode, pntLight, root, scene, sphere, spinner;
 
 FamousEngine = require('famous/core/FamousEngine');
@@ -25806,4 +25822,47 @@ lib = {
 module.exports = lib;
 
 
-},{}]},{},["/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee"]);
+},{}],"/Users/user/NooraHealth/node-with-famous/public/coffee/models/LessonModel.coffee":[function(require,module,exports){
+var App, LessonModel, model;
+
+App = require('../App.coffee');
+
+LessonModel = (function() {
+  function LessonModel() {
+    this.contentEndpoint = "http://noorahealthcontent.noorahealth.org/NooraHealthContent/";
+  }
+
+  LessonModel.prototype.lessons = function() {
+    return [
+      {
+        title: "One",
+        image: "Image/Pulse.jpeg"
+      }, {
+        title: "Two",
+        image: "Image/Hygiene.jpg"
+      }, {
+        title: "Three",
+        image: "Image/medication.jpeg"
+      }
+    ];
+  };
+
+  return LessonModel;
+
+})();
+
+model = new LessonModel();
+
+module.exports = model;
+
+
+},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/models/Users.coffee":[function(require,module,exports){
+
+/*
+ * This is the future User Model. 
+ * The class UserModel will register and login users.
+ * It is an interface with the client-side npm module Passport
+ */
+
+
+},{}]},{},["/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/LessonController.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/models/LessonModel.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/models/Users.coffee"]);
