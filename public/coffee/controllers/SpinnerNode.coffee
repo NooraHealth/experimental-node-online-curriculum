@@ -2,8 +2,8 @@ FamousEngine = require 'famous/core/FamousEngine'
 DOMElement = require 'famous/dom-renderables/DOMElement'
 Node = require 'famous/core/Node'
 Vec3 = require 'famous/math/Vec3'
-Lib = require './lib/lib.coffee'
-App = require './App.coffee'
+Lib = require '../lib/lib.coffee'
+App = require '../App.coffee'
 
 class SpinnerNode extends Node
   constructor: ()->

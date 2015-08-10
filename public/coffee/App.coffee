@@ -22,6 +22,10 @@ class App
 
     @.DANCE_NUMBER = 1
     @.switchChoreography()
+
+    @.state = {
+      dance: @.CHOREOGRAPHY,
+    }
     
   switchChoreography: ()->
     @.CHOREOGRAPHY = @.DANCES[@.DANCE_NUMBER]

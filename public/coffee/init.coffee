@@ -8,9 +8,9 @@ Collision = require 'famous/physics/constraints/Collision'
 PointLight  = require 'famous/webgl-renderables/lights/PointLight'
 AmbientLight  = require 'famous/webgl-renderables/lights/AmbientLight'
 App = require './App.coffee'
-SpinnerNode = require './SpinnerNode.coffee'
-ColoredSphere = require './ColoredSphere.coffee'
-Header = require './Header.coffee'
+SpinnerNode = require './controllers/SpinnerNode.coffee'
+ColoredSphere = require './controllers/ColoredSphere.coffee'
+Header = require './controllers/Header.coffee'
 
 FamousEngine.init()
 
