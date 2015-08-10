@@ -9,7 +9,7 @@ Lib = require '../lib/lib.coffee'
 App = require '../App.coffee'
 LessonModel = require '../models/LessonModel.coffee'
 
-class LessonController extends Node
+class LessonThumbnail extends Node
   constructor: ()->
 
     #@.domElement = new DOMElement @, {
@@ -17,6 +17,6 @@ class LessonController extends Node
     #}
 
 
-lc = new LessonController()
+lc = new LessonThumbnail()
 
 module.exports = lc

@@ -5,8 +5,8 @@ DOMElement = require 'famous/dom-renderables/DOMElement'
 Sphere = require 'famous/physics/bodies/Sphere'
 Spring = Physics.Spring
 Vec3 = require 'famous/math/Vec3'
-Lib = require './lib/lib.coffee'
-App = require './App.coffee'
+Lib = require '../lib/lib.coffee'
+App = require '../App.coffee'
 Mesh = require 'famous/webgl-renderables/Mesh'
 
 class ColoredSphere extends Node

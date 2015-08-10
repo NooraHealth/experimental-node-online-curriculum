@@ -25400,6 +25400,9 @@ App = (function() {
     this.DANCES = [this.CHAOS, this.ORDERED, this.SYNCHRONIZED];
     this.DANCE_NUMBER = 1;
     this.switchChoreography();
+    this.state = {
+      dance: this.CHOREOGRAPHY
+    };
   }
 
   App.prototype.switchChoreography = function() {
@@ -25416,7 +25419,7 @@ app = new App();
 module.exports = app;
 
 
-},{"famous/utilities/Color":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/utilities/Color.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee":[function(require,module,exports){
+},{"famous/utilities/Color":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/utilities/Color.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/ColoredSphere.coffee":[function(require,module,exports){
 var App, ColoredSphere, DOMElement, FamousEngine, Lib, Mesh, Node, Physics, Sphere, Spring, Vec3,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -25436,9 +25439,9 @@ Spring = Physics.Spring;
 
 Vec3 = require('famous/math/Vec3');
 
-Lib = require('./lib/lib.coffee');
+Lib = require('../lib/lib.coffee');
 
-App = require('./App.coffee');
+App = require('../App.coffee');
 
 Mesh = require('famous/webgl-renderables/Mesh');
 
@@ -25503,7 +25506,7 @@ ColoredSphere = (function(superClass) {
 module.exports = ColoredSphere;
 
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee":[function(require,module,exports){
+},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/Header.coffee":[function(require,module,exports){
 var App, Box, DOMElement, FamousEngine, Header, Lib, Logo, Mesh, Node, Physics, Quaternion, RotationalDrag, RotationalSpring, Spring, Transitionable, Vec3,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty,
@@ -25525,9 +25528,9 @@ Spring = Physics.Spring;
 
 Vec3 = require('famous/math/Vec3');
 
-Lib = require('./lib/lib.coffee');
+Lib = require('../lib/lib.coffee');
 
-App = require('./App.coffee');
+App = require('../App.coffee');
 
 Mesh = require('famous/webgl-renderables/Mesh');
 
@@ -25607,7 +25610,46 @@ Logo = (function(superClass) {
 module.exports = Header;
 
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Quaternion":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Quaternion.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Box":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Box.js","famous/physics/forces/RotationalDrag":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalDrag.js","famous/physics/forces/RotationalSpring":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalSpring.js","famous/transitions/Transitionable":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/transitions/Transitionable.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee":[function(require,module,exports){
+},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Quaternion":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Quaternion.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Box":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Box.js","famous/physics/forces/RotationalDrag":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalDrag.js","famous/physics/forces/RotationalSpring":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/forces/RotationalSpring.js","famous/transitions/Transitionable":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/transitions/Transitionable.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/LessonThumbnail.coffee":[function(require,module,exports){
+var App, DOMElement, FamousEngine, LessonModel, LessonThumbnail, Lib, Node, Physics, Sphere, Spring, Vec3, lc,
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
+
+FamousEngine = require('famous/core/FamousEngine');
+
+Node = require('famous/core/Node');
+
+Physics = require('famous/physics');
+
+DOMElement = require('famous/dom-renderables/DOMElement');
+
+Sphere = require('famous/physics/bodies/Sphere');
+
+Spring = Physics.Spring;
+
+Vec3 = require('famous/math/Vec3');
+
+Lib = require('../lib/lib.coffee');
+
+App = require('../App.coffee');
+
+LessonModel = require('../models/LessonModel.coffee');
+
+LessonThumbnail = (function(superClass) {
+  extend(LessonThumbnail, superClass);
+
+  function LessonThumbnail() {}
+
+  return LessonThumbnail;
+
+})(Node);
+
+lc = new LessonThumbnail();
+
+module.exports = lc;
+
+
+},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","../models/LessonModel.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/models/LessonModel.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/SpinnerNode.coffee":[function(require,module,exports){
 var App, DOMElement, FamousEngine, Lib, Node, SpinnerNode, Vec3,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -25621,9 +25663,9 @@ Node = require('famous/core/Node');
 
 Vec3 = require('famous/math/Vec3');
 
-Lib = require('./lib/lib.coffee');
+Lib = require('../lib/lib.coffee');
 
-App = require('./App.coffee');
+App = require('../App.coffee');
 
 SpinnerNode = (function(superClass) {
   extend(SpinnerNode, superClass);
@@ -25698,46 +25740,7 @@ SpinnerNode = (function(superClass) {
 module.exports = SpinnerNode;
 
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/LessonController.coffee":[function(require,module,exports){
-var App, DOMElement, FamousEngine, LessonController, LessonModel, Lib, Node, Physics, Sphere, Spring, Vec3, lc,
-  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-  hasProp = {}.hasOwnProperty;
-
-FamousEngine = require('famous/core/FamousEngine');
-
-Node = require('famous/core/Node');
-
-Physics = require('famous/physics');
-
-DOMElement = require('famous/dom-renderables/DOMElement');
-
-Sphere = require('famous/physics/bodies/Sphere');
-
-Spring = Physics.Spring;
-
-Vec3 = require('famous/math/Vec3');
-
-Lib = require('../lib/lib.coffee');
-
-App = require('../App.coffee');
-
-LessonModel = require('../models/LessonModel.coffee');
-
-LessonController = (function(superClass) {
-  extend(LessonController, superClass);
-
-  function LessonController() {}
-
-  return LessonController;
-
-})(Node);
-
-lc = new LessonController();
-
-module.exports = lc;
-
-
-},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","../models/LessonModel.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/models/LessonModel.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/bodies/Sphere.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee":[function(require,module,exports){
+},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/math/Vec3.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee":[function(require,module,exports){
 var AmbientLight, App, Camera, Collision, Color, ColoredSphere, DOMElement, Dispatch, FamousEngine, Header, Node, PointLight, SpinnerNode, ambience, ambientColor, ambientLight, camera, header, i, lightnode, pntLight, root, scene, sphere, spinner;
 
 FamousEngine = require('famous/core/FamousEngine');
@@ -25760,11 +25763,11 @@ AmbientLight = require('famous/webgl-renderables/lights/AmbientLight');
 
 App = require('./App.coffee');
 
-SpinnerNode = require('./SpinnerNode.coffee');
+SpinnerNode = require('./controllers/SpinnerNode.coffee');
 
-ColoredSphere = require('./ColoredSphere.coffee');
+ColoredSphere = require('./controllers/ColoredSphere.coffee');
 
-Header = require('./Header.coffee');
+Header = require('./controllers/Header.coffee');
 
 FamousEngine.init();
 
@@ -25806,7 +25809,7 @@ document.addEventListener("click", function() {
 });
 
 
-},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./ColoredSphere.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","./Header.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee","./SpinnerNode.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","famous/components/Camera":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/components/Camera.js","famous/core/Dispatch":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Dispatch.js","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/physics/constraints/Collision":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/constraints/Collision.js","famous/utilities/Color":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/utilities/Color.js","famous/webgl-renderables/lights/AmbientLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/AmbientLight.js","famous/webgl-renderables/lights/PointLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/PointLight.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee":[function(require,module,exports){
+},{"./App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","./controllers/ColoredSphere.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/ColoredSphere.coffee","./controllers/Header.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/Header.coffee","./controllers/SpinnerNode.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/SpinnerNode.coffee","famous/components/Camera":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/components/Camera.js","famous/core/Dispatch":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Dispatch.js","famous/core/FamousEngine":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/dom-renderables/DOMElement.js","famous/physics/constraints/Collision":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/physics/constraints/Collision.js","famous/utilities/Color":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/utilities/Color.js","famous/webgl-renderables/lights/AmbientLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/AmbientLight.js","famous/webgl-renderables/lights/PointLight":"/Users/user/NooraHealth/node-with-famous/node_modules/famous/webgl-renderables/lights/PointLight.js"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee":[function(require,module,exports){
 var lib;
 
 lib = {
@@ -25856,13 +25859,4 @@ model = new LessonModel();
 module.exports = model;
 
 
-},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee"}],"/Users/user/NooraHealth/node-with-famous/public/coffee/models/Users.coffee":[function(require,module,exports){
-
-/*
- * This is the future User Model. 
- * The class UserModel will register and login users.
- * It is an interface with the client-side npm module Passport
- */
-
-
-},{}]},{},["/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/ColoredSphere.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/Header.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/SpinnerNode.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/LessonController.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/models/LessonModel.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/models/Users.coffee"]);
+},{"../App.coffee":"/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee"}]},{},["/Users/user/NooraHealth/node-with-famous/public/coffee/App.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/ColoredSphere.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/Header.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/LessonThumbnail.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/controllers/SpinnerNode.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/init.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/lib/lib.coffee","/Users/user/NooraHealth/node-with-famous/public/coffee/models/LessonModel.coffee"]);
