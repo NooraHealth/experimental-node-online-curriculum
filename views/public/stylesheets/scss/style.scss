@@ -52,6 +52,11 @@ nav {
   display: inline-block;
 }
 
-.dom-element {
-  pointer-events: none;
+.lesson-image {
+  width: 100%;
+}
+
+.lesson-thumbnail {
+  display: inline-block !important;
+  width: 100%;
 }
