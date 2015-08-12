@@ -2,16 +2,23 @@
 # User Model
 ###
 mongoose = require('mongoose')
-###
 Schema = mongoose.Schema
+passportLocalMongoose = require 'passport-local-mongoose'
 
-userSchema = 
+userSchema = {
   oauthID: Number,
   name: String,
-  created: Date
+  created: Date,
+  email: String,
+  password: String
 }
 
 UserSchema = new Schema userSchema
+
+options =
+  usernameField: 'email'
+
+UserSchema.plugin passportLocalMongoose, options
 
 User = mongoose.model 'app-user' , UserSchema
 
@@ -24,3 +31,4 @@ User = mongoose.model 'app-user', {
 }
 
 module.exports = User
+###
