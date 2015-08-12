@@ -3,6 +3,12 @@ var router = express.Router();
 var passport = require('passport');
 var User = require('../models/User.coffee');
 
+// test authentication
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { return next(); }
+  res.redirect('/');
+}
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Noora Health' });
@@ -10,15 +16,14 @@ router.get('/', function(req, res, next) {
 
 /* GET login */
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Login'});
+  if (req.user) {
+    console.log("You are already logged in");
+  } else {
+    res.render('login', { title: 'Login'});
+  }
 });
 
 /* POST login */
-/*
-router.post('/login', passport.authenticate('local'), function(req, res) {
-  res.redirect('/');
-});
-*/
 router.post('/login', passport.authenticate('local'), function(req, res) {
     console.log(req.user.email);
     console.log(" is logged in");
@@ -45,35 +50,20 @@ router.post('/register', function(req, res, next) {
 
 /* GET logout */
 router.get('/logout', function(req, res){
-  req.logout();
+  if (req.user) {
+    console.log(req.user.email + " is logging out");
+    req.logout();
+  } else {
+    console.log("nobody is logged in");
+  }
   res.redirect('/');
 });
-
-// test authentication
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/');
-}
-
-/* GET account page */
-/*router.get('/account', ensureAuthenticated, function(req, res){
-  res.render('account', { user: user});
-  User.findById(req.session.passport.user, function(err, user) {
-    if(err) { 
-      console.log(err); 
-    } else {
-      res.render('account', { user: user});
-    }
-  })
-})*/
-
 
 /* GET Facebook authentication */
 router.get('/auth/facebook',
   passport.authenticate('facebook'),
   function(req, res){
   });
-
 router.get('/auth/facebook/callback/', 
   passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
