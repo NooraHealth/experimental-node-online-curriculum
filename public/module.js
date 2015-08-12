@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/components/Camera.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/user/NooraHealth/online-curriculum/node_modules/famous/components/Camera.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -313,7 +313,7 @@ Camera.prototype.onTransformChange = function onTransformChange(transform) {
 
 module.exports = Camera;
 
-},{"../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Channel.js":[function(require,module,exports){
+},{"../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Channel.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -430,7 +430,7 @@ Channel.prototype.postMessage = function postMessage(message) {
 
 module.exports = Channel;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Clock.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Clock.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -640,7 +640,7 @@ Clock.prototype.clearTimer = function (timer) {
 module.exports = Clock;
 
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -855,7 +855,7 @@ commandPrinters[Commands.NEED_SIZE_FOR] = function need_size_for (buffer, data) 
 module.exports = Commands;
 
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Dispatch.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Dispatch.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -1279,7 +1279,7 @@ function _splitTo (string, target) {
 
 module.exports = new Dispatch();
 
-},{"./Event":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Event.js","./Path":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Path.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Event.js":[function(require,module,exports){
+},{"./Event":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Event.js","./Path":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Path.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Event.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  * 
@@ -1332,7 +1332,7 @@ function stopPropagation () {
 module.exports = Event;
 
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/FamousEngine.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -1803,7 +1803,7 @@ FamousEngine.prototype.stopEngine = function stopEngine() {
 
 module.exports = new FamousEngine();
 
-},{"../render-loops/RequestAnimationFrameLoop":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/render-loops/RequestAnimationFrameLoop.js","../renderers/Compositor":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/Compositor.js","../renderers/UIManager":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/UIManager.js","./Channel":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Channel.js","./Clock":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Clock.js","./Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js","./Dispatch":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Dispatch.js","./Scene":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Scene.js","./SizeSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/SizeSystem.js","./TransformSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/TransformSystem.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js":[function(require,module,exports){
+},{"../render-loops/RequestAnimationFrameLoop":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/render-loops/RequestAnimationFrameLoop.js","../renderers/Compositor":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/Compositor.js","../renderers/UIManager":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/UIManager.js","./Channel":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Channel.js","./Clock":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Clock.js","./Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js","./Dispatch":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Dispatch.js","./Scene":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Scene.js","./SizeSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/SizeSystem.js","./TransformSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/TransformSystem.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Node.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -3095,7 +3095,7 @@ Node.prototype.dismount = function dismount () {
 
 module.exports = Node;
 
-},{"./Dispatch":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Dispatch.js","./Size":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Size.js","./SizeSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/SizeSystem.js","./Transform":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Transform.js","./TransformSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/TransformSystem.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Path.js":[function(require,module,exports){
+},{"./Dispatch":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Dispatch.js","./Size":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Size.js","./SizeSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/SizeSystem.js","./Transform":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Transform.js","./TransformSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/TransformSystem.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Path.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -3269,7 +3269,7 @@ var Path = {
 
 module.exports = Path;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/PathStore.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/PathStore.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -3438,7 +3438,7 @@ PathStore.prototype.getPaths = function getPaths () {
 
 module.exports = PathStore;
 
-},{"./Path":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Path.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Scene.js":[function(require,module,exports){
+},{"./Path":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Path.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Scene.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -3593,7 +3593,7 @@ Scene.prototype.mount = function mount (path) {
 
 module.exports = Scene;
 
-},{"./Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js","./Dispatch":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Dispatch.js","./Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","./SizeSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/SizeSystem.js","./TransformSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/TransformSystem.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Size.js":[function(require,module,exports){
+},{"./Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js","./Dispatch":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Dispatch.js","./Node":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Node.js","./SizeSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/SizeSystem.js","./TransformSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/TransformSystem.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Size.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -3927,7 +3927,7 @@ Size.prototype.fromComponents = function fromComponents (components) {
 module.exports = Size;
 
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/SizeSystem.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/SizeSystem.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  * 
@@ -4200,7 +4200,7 @@ function sizeChanged (node, components, size) {
 
 module.exports = new SizeSystem();
 
-},{"./Dispatch":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Dispatch.js","./Path":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Path.js","./PathStore":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/PathStore.js","./Size":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Size.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Transform.js":[function(require,module,exports){
+},{"./Dispatch":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Dispatch.js","./Path":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Path.js","./PathStore":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/PathStore.js","./Size":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Size.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Transform.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -4987,7 +4987,7 @@ function multiply (out, a, b) {
 
 module.exports = Transform;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/TransformSystem.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/TransformSystem.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  * 
@@ -5364,7 +5364,7 @@ function worldTransformChanged (node, components, transform) {
 
 module.exports = new TransformSystem();
 
-},{"./Dispatch":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Dispatch.js","./Path":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Path.js","./PathStore":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/PathStore.js","./Transform":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Transform.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js":[function(require,module,exports){
+},{"./Dispatch":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Dispatch.js","./Path":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Path.js","./PathStore":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/PathStore.js","./Transform":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Transform.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -6057,7 +6057,7 @@ DOMElement.prototype.draw = function draw() {
 
 module.exports = DOMElement;
 
-},{"../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js","../core/Size":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Size.js","../core/TransformSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/TransformSystem.js","../utilities/CallbackStore":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/CallbackStore.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/DOMRenderer.js":[function(require,module,exports){
+},{"../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js","../core/Size":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Size.js","../core/TransformSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/TransformSystem.js","../utilities/CallbackStore":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/CallbackStore.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/DOMRenderer.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -6836,7 +6836,7 @@ DOMRenderer.prototype.offRemoveEl = function offRemoveEl(path, callback) {
 
 module.exports = DOMRenderer;
 
-},{"../core/Path":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Path.js","../utilities/CallbackStore":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/CallbackStore.js","../utilities/vendorPrefix":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/vendorPrefix.js","./ElementCache":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/ElementCache.js","./Math":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/Math.js","./events/EventMap":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/EventMap.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/ElementCache.js":[function(require,module,exports){
+},{"../core/Path":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Path.js","../utilities/CallbackStore":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/CallbackStore.js","../utilities/vendorPrefix":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/vendorPrefix.js","./ElementCache":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/ElementCache.js","./Math":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/Math.js","./events/EventMap":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/EventMap.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/ElementCache.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -6901,7 +6901,7 @@ function ElementCache (element, path) {
 
 module.exports = ElementCache;
 
-},{"./VoidElements":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/VoidElements.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/Math.js":[function(require,module,exports){
+},{"./VoidElements":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/VoidElements.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/Math.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7087,7 +7087,7 @@ module.exports = {
     invert: invert
 };
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/VoidElements.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/VoidElements.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7140,7 +7140,7 @@ var VoidElements = {
 
 module.exports = VoidElements;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/CompositionEvent.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/CompositionEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7208,7 +7208,7 @@ CompositionEvent.prototype.toString = function toString () {
 
 module.exports = CompositionEvent;
 
-},{"./UIEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/Event.js":[function(require,module,exports){
+},{"./UIEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/Event.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7328,7 +7328,7 @@ Event.prototype.toString = function toString () {
 
 module.exports = Event;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/EventMap.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/EventMap.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7420,7 +7420,7 @@ var EventMap = {
 
 module.exports = EventMap;
 
-},{"./CompositionEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/CompositionEvent.js","./Event":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/Event.js","./FocusEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/FocusEvent.js","./InputEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/InputEvent.js","./KeyboardEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/KeyboardEvent.js","./MouseEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/MouseEvent.js","./TouchEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/TouchEvent.js","./UIEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js","./WheelEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/WheelEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/FocusEvent.js":[function(require,module,exports){
+},{"./CompositionEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/CompositionEvent.js","./Event":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/Event.js","./FocusEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/FocusEvent.js","./InputEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/InputEvent.js","./KeyboardEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/KeyboardEvent.js","./MouseEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/MouseEvent.js","./TouchEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/TouchEvent.js","./UIEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js","./WheelEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/WheelEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/FocusEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7482,7 +7482,7 @@ FocusEvent.prototype.toString = function toString () {
 
 module.exports = FocusEvent;
 
-},{"./UIEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/InputEvent.js":[function(require,module,exports){
+},{"./UIEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/InputEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7573,7 +7573,7 @@ InputEvent.prototype.toString = function toString () {
 
 module.exports = InputEvent;
 
-},{"./UIEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/KeyboardEvent.js":[function(require,module,exports){
+},{"./UIEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/KeyboardEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7734,7 +7734,7 @@ KeyboardEvent.prototype.toString = function toString () {
 
 module.exports = KeyboardEvent;
 
-},{"./UIEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/MouseEvent.js":[function(require,module,exports){
+},{"./UIEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/MouseEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -7904,7 +7904,7 @@ MouseEvent.prototype.toString = function toString () {
 
 module.exports = MouseEvent;
 
-},{"./UIEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/TouchEvent.js":[function(require,module,exports){
+},{"./UIEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/TouchEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -8102,7 +8102,7 @@ TouchEvent.prototype.toString = function toString () {
 
 module.exports = TouchEvent;
 
-},{"./UIEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js":[function(require,module,exports){
+},{"./UIEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/UIEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -8170,7 +8170,7 @@ UIEvent.prototype.toString = function toString () {
 
 module.exports = UIEvent;
 
-},{"./Event":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/Event.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/WheelEvent.js":[function(require,module,exports){
+},{"./Event":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/Event.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/WheelEvent.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -8281,7 +8281,7 @@ WheelEvent.prototype.toString = function toString () {
 
 module.exports = WheelEvent;
 
-},{"./MouseEvent":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/events/MouseEvent.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js":[function(require,module,exports){
+},{"./MouseEvent":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/events/MouseEvent.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  * 
@@ -8773,7 +8773,7 @@ Mat33.multiply = function multiply(matrix1, matrix2, output) {
 
 module.exports = Mat33;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Quaternion.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Quaternion.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -9323,7 +9323,7 @@ Quaternion.dot = function dot(q1, q2) {
 
 module.exports = Quaternion;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec2.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec2.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -9694,7 +9694,7 @@ Vec2.cross = function(v1,v2) {
 
 module.exports = Vec2;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -10302,7 +10302,7 @@ Vec3.project = function project(v1, v2, output) {
 
 module.exports = Vec3;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/Geometry.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/Geometry.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -11103,7 +11103,7 @@ module.exports = {
     ConvexHull: ConvexHull
 };
 
-},{"../math/Mat33":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js","../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","../utilities/ObjectManager":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/ObjectManager.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/PhysicsEngine.js":[function(require,module,exports){
+},{"../math/Mat33":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js","../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","../utilities/ObjectManager":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/ObjectManager.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/PhysicsEngine.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -11603,7 +11603,7 @@ function _integratePose(body, dt) {
 
 module.exports = PhysicsEngine;
 
-},{"../math/Quaternion":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Quaternion.js","../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","../utilities/CallbackStore":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/CallbackStore.js","./bodies/Particle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Particle.js","./constraints/Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js","./forces/Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Box.js":[function(require,module,exports){
+},{"../math/Quaternion":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Quaternion.js","../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","../utilities/CallbackStore":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/CallbackStore.js","./bodies/Particle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Particle.js","./constraints/Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js","./forces/Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Box.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -11669,7 +11669,7 @@ Box.prototype.constructor = Box;
 
 module.exports = Box;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./convexBodyFactory":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/convexBodyFactory.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Particle.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./convexBodyFactory":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/convexBodyFactory.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Particle.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -12173,7 +12173,7 @@ Particle.prototype.updateShape = function updateShape() {};
 
 module.exports = Particle;
 
-},{"../../math/Mat33":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","../../utilities/CallbackStore":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/CallbackStore.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Sphere.js":[function(require,module,exports){
+},{"../../math/Mat33":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","../../utilities/CallbackStore":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/CallbackStore.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Sphere.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -12295,7 +12295,7 @@ Sphere.prototype.support = function support(direction) {
  */
 module.exports = Sphere;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Particle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Particle.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Wall.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Particle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Particle.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Wall.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -12384,7 +12384,7 @@ Wall.prototype.constructor = Wall;
 
 module.exports = Wall;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Particle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Particle.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/convexBodyFactory.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Particle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Particle.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/convexBodyFactory.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -12639,7 +12639,7 @@ function _computeInertiaProperties(T) {
 
 module.exports = convexBodyFactory;
 
-},{"../../math/Mat33":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/Geometry.js","./Particle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Particle.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Angle.js":[function(require,module,exports){
+},{"../../math/Mat33":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/Geometry.js","./Particle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Particle.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Angle.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -12763,7 +12763,7 @@ Angle.prototype.resolve = function update() {
 
 module.exports = Angle;
 
-},{"../../math/Mat33":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/BallAndSocket.js":[function(require,module,exports){
+},{"../../math/Mat33":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/BallAndSocket.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -12934,7 +12934,7 @@ BallAndSocket.prototype.resolve = function resolve() {
 
 module.exports = BallAndSocket;
 
-},{"../../math/Mat33":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Collision.js":[function(require,module,exports){
+},{"../../math/Mat33":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Collision.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -13344,7 +13344,7 @@ Collision.BruteForceAABB = BruteForce.BruteForceAABB;
 
 module.exports = Collision;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","../../utilities/ObjectManager":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/ObjectManager.js","./Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js","./collision/BruteForce":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/BruteForce.js","./collision/ContactManifold":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/ContactManifold.js","./collision/ConvexCollisionDetection":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/ConvexCollisionDetection.js","./collision/SweepAndPrune":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/SweepAndPrune.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","../../utilities/ObjectManager":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/ObjectManager.js","./Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js","./collision/BruteForce":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/BruteForce.js","./collision/ContactManifold":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/ContactManifold.js","./collision/ConvexCollisionDetection":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/ConvexCollisionDetection.js","./collision/SweepAndPrune":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/SweepAndPrune.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -13430,7 +13430,7 @@ Constraint.prototype.resolve = function resolve(time, dt) {};
 
 module.exports = Constraint;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Curve.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Curve.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -13631,7 +13631,7 @@ Curve.prototype.resolve = function resolve() {
 
 module.exports = Curve;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Direction.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Direction.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -13811,7 +13811,7 @@ Direction.prototype.resolve = function update() {
 
 module.exports = Direction;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Distance.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Distance.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -13988,7 +13988,7 @@ Distance.prototype.resolve = function resolve() {
 
 module.exports = Distance;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Hinge.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Hinge.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -14240,7 +14240,7 @@ Hinge.prototype.resolve = function resolve() {
 
 module.exports = Hinge;
 
-},{"../../math/Mat33":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/AABB.js":[function(require,module,exports){
+},{"../../math/Mat33":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/AABB.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -14412,7 +14412,7 @@ AABB.vertexThreshold = 100;
 
 module.exports = AABB;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/BruteForce.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/BruteForce.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -14530,7 +14530,7 @@ BruteForce.prototype.update = function update() {
 module.exports.BruteForceAABB = BruteForceAABB;
 module.exports.BruteForce = BruteForce;
 
-},{"./AABB":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/AABB.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/ContactManifold.js":[function(require,module,exports){
+},{"./AABB":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/AABB.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/ContactManifold.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -15129,7 +15129,7 @@ Contact.prototype.resolve = function resolve() {
 
 module.exports = ContactManifoldTable;
 
-},{"../../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","../../../utilities/ObjectManager":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/ObjectManager.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/ConvexCollisionDetection.js":[function(require,module,exports){
+},{"../../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","../../../utilities/ObjectManager":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/ObjectManager.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/ConvexCollisionDetection.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -15355,7 +15355,7 @@ function epa(body1, body2, polytope) {
 module.exports.gjk = gjk;
 module.exports.epa = epa;
 
-},{"../../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","../../../utilities/ObjectManager":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/ObjectManager.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/SweepAndPrune.js":[function(require,module,exports){
+},{"../../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","../../../utilities/ObjectManager":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/ObjectManager.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/SweepAndPrune.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -15599,7 +15599,7 @@ SweepVolume.prototype.update = function() {
 
 module.exports = SweepAndPrune;
 
-},{"./AABB":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/collision/AABB.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Drag.js":[function(require,module,exports){
+},{"./AABB":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/collision/AABB.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Drag.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -15708,7 +15708,7 @@ Drag.prototype.update = function update() {
 
 module.exports = Drag;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -15814,7 +15814,7 @@ Force.prototype.update = function update(time, dt) {};
 
 module.exports = Force;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Gravity1D.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Gravity1D.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -15937,7 +15937,7 @@ Gravity1D.prototype.update = function() {
 
 module.exports = Gravity1D;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Gravity3D.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Gravity3D.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -16033,7 +16033,7 @@ Gravity3D.prototype.update = function() {
 
 module.exports = Gravity3D;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/RotationalDrag.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/RotationalDrag.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -16138,7 +16138,7 @@ RotationalDrag.prototype.update = function update() {
 
 module.exports = RotationalDrag;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/RotationalSpring.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/RotationalSpring.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -16282,7 +16282,7 @@ RotationalSpring.prototype.update = function update() {
 
 module.exports = RotationalSpring;
 
-},{"../../math/Mat33":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Spring.js":[function(require,module,exports){
+},{"../../math/Mat33":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Mat33.js","../../math/Quaternion":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Quaternion.js","../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Spring.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -16448,7 +16448,7 @@ Spring.prototype.update = function() {
 
 module.exports = Spring;
 
-},{"../../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/index.js":[function(require,module,exports){
+},{"../../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","./Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/index.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -16503,7 +16503,7 @@ module.exports = {
     Geometry: require('./Geometry')
 };
 
-},{"./Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/Geometry.js","./PhysicsEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/PhysicsEngine.js","./bodies/Box":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Box.js","./bodies/Particle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Particle.js","./bodies/Sphere":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Sphere.js","./bodies/Wall":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Wall.js","./bodies/convexBodyFactory":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/convexBodyFactory.js","./constraints/Angle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Angle.js","./constraints/BallAndSocket":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/BallAndSocket.js","./constraints/Collision":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Collision.js","./constraints/Constraint":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Constraint.js","./constraints/Curve":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Curve.js","./constraints/Direction":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Direction.js","./constraints/Distance":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Distance.js","./constraints/Hinge":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Hinge.js","./forces/Drag":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Drag.js","./forces/Force":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Force.js","./forces/Gravity1D":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Gravity1D.js","./forces/Gravity3D":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Gravity3D.js","./forces/RotationalDrag":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/RotationalDrag.js","./forces/RotationalSpring":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/RotationalSpring.js","./forces/Spring":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/Spring.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/polyfills/animationFrame.js":[function(require,module,exports){
+},{"./Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/Geometry.js","./PhysicsEngine":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/PhysicsEngine.js","./bodies/Box":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Box.js","./bodies/Particle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Particle.js","./bodies/Sphere":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Sphere.js","./bodies/Wall":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Wall.js","./bodies/convexBodyFactory":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/convexBodyFactory.js","./constraints/Angle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Angle.js","./constraints/BallAndSocket":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/BallAndSocket.js","./constraints/Collision":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Collision.js","./constraints/Constraint":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Constraint.js","./constraints/Curve":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Curve.js","./constraints/Direction":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Direction.js","./constraints/Distance":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Distance.js","./constraints/Hinge":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Hinge.js","./forces/Drag":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Drag.js","./forces/Force":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Force.js","./forces/Gravity1D":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Gravity1D.js","./forces/Gravity3D":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Gravity3D.js","./forces/RotationalDrag":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/RotationalDrag.js","./forces/RotationalSpring":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/RotationalSpring.js","./forces/Spring":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/Spring.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/polyfills/animationFrame.js":[function(require,module,exports){
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
 // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
 // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
@@ -16588,7 +16588,7 @@ var animationFrame = {
 
 module.exports = animationFrame;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/polyfills/index.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/polyfills/index.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  * 
@@ -16620,7 +16620,7 @@ module.exports = {
     cancelAnimationFrame: require('./animationFrame').cancelAnimationFrame
 };
 
-},{"./animationFrame":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/polyfills/animationFrame.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/render-loops/RequestAnimationFrameLoop.js":[function(require,module,exports){
+},{"./animationFrame":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/polyfills/animationFrame.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/render-loops/RequestAnimationFrameLoop.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -16932,7 +16932,7 @@ RequestAnimationFrameLoop.prototype.noLongerUpdate = function noLongerUpdate(upd
 
 module.exports = RequestAnimationFrameLoop;
 
-},{"../polyfills":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/polyfills/index.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/Compositor.js":[function(require,module,exports){
+},{"../polyfills":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/polyfills/index.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/Compositor.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -17226,7 +17226,7 @@ Compositor.prototype.clearCommands = function clearCommands() {
 
 module.exports = Compositor;
 
-},{"../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js","./Context":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/Context.js","./inject-css":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/inject-css.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/Context.js":[function(require,module,exports){
+},{"../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js","./Context":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/Context.js","./inject-css":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/inject-css.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/Context.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -17771,7 +17771,7 @@ function changeViewTransform (context, path, commands, iterator) {
 
 module.exports = Context;
 
-},{"../components/Camera":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/components/Camera.js","../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js","../dom-renderers/DOMRenderer":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderers/DOMRenderer.js","../webgl-renderers/WebGLRenderer":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/WebGLRenderer.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/UIManager.js":[function(require,module,exports){
+},{"../components/Camera":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/components/Camera.js","../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js","../dom-renderers/DOMRenderer":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderers/DOMRenderer.js","../webgl-renderers/WebGLRenderer":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/WebGLRenderer.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/UIManager.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -17930,7 +17930,7 @@ UIManager.prototype.update = function update (time) {
 
 module.exports = UIManager;
 
-},{"../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/renderers/inject-css.js":[function(require,module,exports){
+},{"../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/renderers/inject-css.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -18021,7 +18021,7 @@ function injectCSS() {
 
 module.exports = injectCSS;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/transitions/Curves.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/transitions/Curves.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -18277,7 +18277,7 @@ var Curves = {
 
 module.exports = Curves;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/transitions/Transitionable.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/transitions/Transitionable.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -18735,7 +18735,7 @@ Transitionable.prototype.set = function(state, transition, callback) {
 
 module.exports = Transitionable;
 
-},{"../core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","./Curves":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/transitions/Curves.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/CallbackStore.js":[function(require,module,exports){
+},{"../core/FamousEngine":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/FamousEngine.js","./Curves":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/transitions/Curves.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/CallbackStore.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -18833,7 +18833,7 @@ CallbackStore.prototype.trigger = function trigger (key, payload) {
 
 module.exports = CallbackStore;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/Color.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/Color.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -19283,7 +19283,7 @@ var colorNames = { aliceblue: '#f0f8ff', antiquewhite: '#faebd7', aqua: '#00ffff
 
 module.exports = Color;
 
-},{"../transitions/Transitionable":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/transitions/Transitionable.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/ObjectManager.js":[function(require,module,exports){
+},{"../transitions/Transitionable":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/transitions/Transitionable.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/ObjectManager.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -19376,7 +19376,7 @@ ObjectManager.disposeOf = function(type) {
 
 module.exports = ObjectManager;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/Registry.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/Registry.js":[function(require,module,exports){
 'use strict';
 
 function Registry () {
@@ -19435,7 +19435,7 @@ Registry.prototype.getKeyToValue = function getKeyToValue () {
 
 module.exports = Registry;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/clone.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/clone.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -19499,7 +19499,7 @@ var clone = function clone(b) {
 
 module.exports = clone;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/keyValueToArrays.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/keyValueToArrays.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -19556,7 +19556,7 @@ module.exports = function keyValuesToArrays(obj) {
     };
 };
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/loadURL.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/loadURL.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -19607,7 +19607,7 @@ var loadURL = function loadURL(url, callback) {
 
 module.exports = loadURL;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/vendorPrefix.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/vendorPrefix.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -19667,7 +19667,7 @@ function vendorPrefix(property) {
 
 module.exports = vendorPrefix;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/DynamicGeometry.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/DynamicGeometry.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -19874,7 +19874,7 @@ DynamicGeometry.prototype.getTextureCoords = function () {
 
 module.exports = DynamicGeometry;
 
-},{"./Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js":[function(require,module,exports){
+},{"./Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -19940,7 +19940,7 @@ function Geometry(options) {
 
 module.exports = Geometry;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -20508,7 +20508,7 @@ GeometryHelper.addBackfaceTriangles = function addBackfaceTriangles(vertices, in
 
 module.exports = GeometryHelper;
 
-},{"../math/Vec2":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec2.js","../math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/OBJLoader.js":[function(require,module,exports){
+},{"../math/Vec2":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec2.js","../math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/OBJLoader.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21002,7 +21002,7 @@ function flatten(arr) {
 
 module.exports = OBJLoader;
 
-},{"../utilities/loadURL":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/loadURL.js","./GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/index.js":[function(require,module,exports){
+},{"../utilities/loadURL":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/loadURL.js","./GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/index.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21047,7 +21047,7 @@ module.exports = {
     OBJLoader: require('./OBJLoader')
 };
 
-},{"./DynamicGeometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/DynamicGeometry.js","./Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","./GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js","./OBJLoader":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/OBJLoader.js","./primitives/Box":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Box.js","./primitives/Circle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Circle.js","./primitives/Cylinder":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Cylinder.js","./primitives/GeodesicSphere":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/GeodesicSphere.js","./primitives/Icosahedron":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Icosahedron.js","./primitives/ParametricCone":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/ParametricCone.js","./primitives/Plane":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Plane.js","./primitives/Sphere":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Sphere.js","./primitives/Tetrahedron":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Tetrahedron.js","./primitives/Torus":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Torus.js","./primitives/Triangle":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Triangle.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Box.js":[function(require,module,exports){
+},{"./DynamicGeometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/DynamicGeometry.js","./Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","./GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js","./OBJLoader":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/OBJLoader.js","./primitives/Box":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Box.js","./primitives/Circle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Circle.js","./primitives/Cylinder":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Cylinder.js","./primitives/GeodesicSphere":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/GeodesicSphere.js","./primitives/Icosahedron":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Icosahedron.js","./primitives/ParametricCone":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/ParametricCone.js","./primitives/Plane":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Plane.js","./primitives/Sphere":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Sphere.js","./primitives/Tetrahedron":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Tetrahedron.js","./primitives/Torus":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Torus.js","./primitives/Triangle":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Triangle.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Box.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21142,7 +21142,7 @@ function BoxGeometry(options) {
 
 module.exports = BoxGeometry;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Circle.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Circle.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21258,7 +21258,7 @@ function getCircleBuffers(detail) {
 
 module.exports = Circle;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Cylinder.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Cylinder.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21347,7 +21347,7 @@ Cylinder.generator = function generator(r, u, v, pos) {
 
 module.exports = Cylinder;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/GeodesicSphere.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/GeodesicSphere.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  * 
@@ -21427,7 +21427,7 @@ function GeodesicSphere (options) {
 
 module.exports = GeodesicSphere;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Icosahedron.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Icosahedron.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  * 
@@ -21505,7 +21505,7 @@ function Icosahedron( options )
 
 module.exports = Icosahedron;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/ParametricCone.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/ParametricCone.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21591,7 +21591,7 @@ ParametricCone.generator = function generator(r, u, v, pos) {
 
 module.exports = ParametricCone;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Plane.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Plane.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21682,7 +21682,7 @@ function Plane(options) {
 
 module.exports = Plane;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Sphere.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Sphere.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21770,7 +21770,7 @@ ParametricSphere.generator = function generator(u, v, pos) {
 
 module.exports = ParametricSphere;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Tetrahedron.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Tetrahedron.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21873,7 +21873,7 @@ function Tetrahedron(options) {
 
 module.exports = Tetrahedron;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Torus.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Torus.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -21959,7 +21959,7 @@ Torus.generator = function generator(c, a, u, v, pos) {
 
 module.exports = Torus;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/primitives/Triangle.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/primitives/Triangle.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -22039,7 +22039,7 @@ function Triangle (options) {
 
 module.exports = Triangle;
 
-},{"../Geometry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/Mesh.js":[function(require,module,exports){
+},{"../Geometry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/Geometry.js","../GeometryHelper":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/GeometryHelper.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/Mesh.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -22744,7 +22744,7 @@ function addMeshToMaterial(mesh, material, name) {
 
 module.exports = Mesh;
 
-},{"../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js","../core/TransformSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/TransformSystem.js","../webgl-geometries":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-geometries/index.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/lights/AmbientLight.js":[function(require,module,exports){
+},{"../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js","../core/TransformSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/TransformSystem.js","../webgl-geometries":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-geometries/index.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/lights/AmbientLight.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -22804,7 +22804,7 @@ AmbientLight.prototype.constructor = AmbientLight;
 
 module.exports = AmbientLight;
 
-},{"../../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js","./Light":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/lights/Light.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/lights/Light.js":[function(require,module,exports){
+},{"../../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js","./Light":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/lights/Light.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/lights/Light.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -22926,7 +22926,7 @@ Light.prototype.onUpdate = function onUpdate() {
 
 module.exports = Light;
 
-},{"../../core/Commands":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Commands.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/lights/PointLight.js":[function(require,module,exports){
+},{"../../core/Commands":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Commands.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/lights/PointLight.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -23019,7 +23019,7 @@ PointLight.prototype.onTransformChange = function onTransformChange (transform) 
 
 module.exports = PointLight;
 
-},{"../../core/TransformSystem":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/TransformSystem.js","./Light":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/lights/Light.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Buffer.js":[function(require,module,exports){
+},{"../../core/TransformSystem":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/TransformSystem.js","./Light":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/lights/Light.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Buffer.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -23091,7 +23091,7 @@ Buffer.prototype.subData = function subData() {
 
 module.exports = Buffer;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/BufferRegistry.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/BufferRegistry.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -23238,7 +23238,7 @@ BufferRegistry.prototype.allocate = function allocate(geometryId, name, value, s
 
 module.exports = BufferRegistry;
 
-},{"./Buffer":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Buffer.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Debug.js":[function(require,module,exports){
+},{"./Buffer":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Buffer.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Debug.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -23335,7 +23335,7 @@ function _processErrors(errors, source) {
 
 module.exports = Debug;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Program.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Program.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -23818,7 +23818,7 @@ Program.prototype.compileShader = function compileShader(shader, source) {
 
 module.exports = Program;
 
-},{"../utilities/clone":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/clone.js","../utilities/keyValueToArrays":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/keyValueToArrays.js","../webgl-shaders":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-shaders/index.js","./Debug":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Debug.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Texture.js":[function(require,module,exports){
+},{"../utilities/clone":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/clone.js","../utilities/keyValueToArrays":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/keyValueToArrays.js","../webgl-shaders":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-shaders/index.js","./Debug":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Debug.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Texture.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -23959,7 +23959,7 @@ Texture.prototype.readBack = function readBack(x, y, width, height) {
 
 module.exports = Texture;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/TextureManager.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/TextureManager.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -24171,7 +24171,7 @@ TextureManager.prototype.bindTexture = function bindTexture(id) {
 
 module.exports = TextureManager;
 
-},{"./Texture":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Texture.js","./createCheckerboard":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/createCheckerboard.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/WebGLRenderer.js":[function(require,module,exports){
+},{"./Texture":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Texture.js","./createCheckerboard":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/createCheckerboard.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/WebGLRenderer.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -25027,7 +25027,7 @@ WebGLRenderer.prototype.resetOptions = function resetOptions(options) {
 
 module.exports = WebGLRenderer;
 
-},{"../utilities/Registry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/Registry.js","../utilities/keyValueToArrays":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/keyValueToArrays.js","./BufferRegistry":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/BufferRegistry.js","./Program":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/Program.js","./TextureManager":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/TextureManager.js","./compileMaterial":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/compileMaterial.js","./radixSort":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/radixSort.js"}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/compileMaterial.js":[function(require,module,exports){
+},{"../utilities/Registry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/Registry.js","../utilities/keyValueToArrays":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/keyValueToArrays.js","./BufferRegistry":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/BufferRegistry.js","./Program":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/Program.js","./TextureManager":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/TextureManager.js","./compileMaterial":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/compileMaterial.js","./radixSort":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/radixSort.js"}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/compileMaterial.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -25160,7 +25160,7 @@ function _arrayToVec(array) {
 
 module.exports = compileMaterial;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/createCheckerboard.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/createCheckerboard.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -25211,7 +25211,7 @@ function createCheckerBoard() {
 
 module.exports = createCheckerBoard;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderers/radixSort.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderers/radixSort.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -25348,7 +25348,7 @@ function radixSort(list, registry) {
 
 module.exports = radixSort;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-shaders/index.js":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-shaders/index.js":[function(require,module,exports){
 /**
  * The MIT License (MIT)
  *
@@ -25384,7 +25384,7 @@ var shaders = {
 
 module.exports = shaders;
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee":[function(require,module,exports){
 var App, Color, app,
   modulo = function(a, b) { return (+a % (b = +b) + b) % b; };
 
@@ -25419,7 +25419,7 @@ app = new App();
 module.exports = app;
 
 
-},{"famous/utilities/Color":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/Color.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/ColoredSphere.coffee":[function(require,module,exports){
+},{"famous/utilities/Color":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/Color.js"}],"/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/ColoredSphere.coffee":[function(require,module,exports){
 var App, ColoredSphere, DOMElement, FamousEngine, Lib, Mesh, Node, Physics, Sphere, Spring, Vec3,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -25506,7 +25506,7 @@ ColoredSphere = (function(superClass) {
 module.exports = ColoredSphere;
 
 
-},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Sphere.js","famous/webgl-renderables/Mesh":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/Header.coffee":[function(require,module,exports){
+},{"../App.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Sphere.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/Header.coffee":[function(require,module,exports){
 var App, Box, DOMElement, FamousEngine, Header, Lib, Logo, Mesh, Node, Physics, Quaternion, RotationalDrag, RotationalSpring, Spring, Transitionable, Vec3,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty,
@@ -25610,7 +25610,7 @@ Logo = (function(superClass) {
 module.exports = Header;
 
 
-},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Quaternion":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Quaternion.js","famous/math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Box":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Box.js","famous/physics/forces/RotationalDrag":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/RotationalDrag.js","famous/physics/forces/RotationalSpring":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/forces/RotationalSpring.js","famous/transitions/Transitionable":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/transitions/Transitionable.js","famous/webgl-renderables/Mesh":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/LessonThumbnail.coffee":[function(require,module,exports){
+},{"../App.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Quaternion":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Quaternion.js","famous/math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Box":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Box.js","famous/physics/forces/RotationalDrag":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/RotationalDrag.js","famous/physics/forces/RotationalSpring":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/forces/RotationalSpring.js","famous/transitions/Transitionable":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/transitions/Transitionable.js","famous/webgl-renderables/Mesh":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/Mesh.js"}],"/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/LessonThumbnail.coffee":[function(require,module,exports){
 var App, DOMElement, FamousEngine, LessonModel, LessonThumbnail, Lib, Node, Physics, Sphere, Spring, Vec3, lc,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -25649,7 +25649,7 @@ lc = new LessonThumbnail();
 module.exports = lc;
 
 
-},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","../models/LessonModel.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/models/LessonModel.coffee","famous/core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Sphere.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/SpinnerNode.coffee":[function(require,module,exports){
+},{"../App.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/lib/lib.coffee","../models/LessonModel.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/models/LessonModel.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/bodies/Sphere.js"}],"/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/SpinnerNode.coffee":[function(require,module,exports){
 var App, DOMElement, FamousEngine, Lib, Node, SpinnerNode, Vec3,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -25740,7 +25740,7 @@ SpinnerNode = (function(superClass) {
 module.exports = SpinnerNode;
 
 
-},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/init.coffee":[function(require,module,exports){
+},{"../App.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/lib/lib.coffee","famous/core/FamousEngine":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/math/Vec3.js"}],"/Users/user/NooraHealth/online-curriculum/public/coffee/init.coffee":[function(require,module,exports){
 var AmbientLight, App, Camera, Collision, Color, ColoredSphere, DOMElement, Dispatch, FamousEngine, Header, Node, PointLight, SpinnerNode, ambience, ambientColor, ambientLight, camera, header, i, lightnode, pntLight, root, scene, sphere, spinner;
 
 FamousEngine = require('famous/core/FamousEngine');
@@ -25809,7 +25809,7 @@ document.addEventListener("click", function() {
 });
 
 
-},{"./App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","./controllers/ColoredSphere.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/ColoredSphere.coffee","./controllers/Header.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/Header.coffee","./controllers/SpinnerNode.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/SpinnerNode.coffee","famous/components/Camera":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/components/Camera.js","famous/core/Dispatch":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Dispatch.js","famous/core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/physics/constraints/Collision":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/constraints/Collision.js","famous/utilities/Color":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/utilities/Color.js","famous/webgl-renderables/lights/AmbientLight":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/lights/AmbientLight.js","famous/webgl-renderables/lights/PointLight":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/webgl-renderables/lights/PointLight.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee":[function(require,module,exports){
+},{"./App.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee","./controllers/ColoredSphere.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/ColoredSphere.coffee","./controllers/Header.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/Header.coffee","./controllers/SpinnerNode.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/SpinnerNode.coffee","famous/components/Camera":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/components/Camera.js","famous/core/Dispatch":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Dispatch.js","famous/core/FamousEngine":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/physics/constraints/Collision":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/physics/constraints/Collision.js","famous/utilities/Color":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/utilities/Color.js","famous/webgl-renderables/lights/AmbientLight":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/lights/AmbientLight.js","famous/webgl-renderables/lights/PointLight":"/Users/user/NooraHealth/online-curriculum/node_modules/famous/webgl-renderables/lights/PointLight.js"}],"/Users/user/NooraHealth/online-curriculum/public/coffee/lib/lib.coffee":[function(require,module,exports){
 var lib;
 
 lib = {
@@ -25825,7 +25825,7 @@ lib = {
 module.exports = lib;
 
 
-},{}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/models/LessonModel.coffee":[function(require,module,exports){
+},{}],"/Users/user/NooraHealth/online-curriculum/public/coffee/models/LessonModel.coffee":[function(require,module,exports){
 var App, LessonModel, model;
 
 App = require('../App.coffee');
@@ -25859,4 +25859,4 @@ model = new LessonModel();
 module.exports = model;
 
 
-},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee"}]},{},["/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/ColoredSphere.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/Header.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/LessonThumbnail.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/SpinnerNode.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/init.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/models/LessonModel.coffee"]);
+},{"../App.coffee":"/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee"}]},{},["/Users/user/NooraHealth/online-curriculum/public/coffee/App.coffee","/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/ColoredSphere.coffee","/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/Header.coffee","/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/LessonThumbnail.coffee","/Users/user/NooraHealth/online-curriculum/public/coffee/controllers/SpinnerNode.coffee","/Users/user/NooraHealth/online-curriculum/public/coffee/init.coffee","/Users/user/NooraHealth/online-curriculum/public/coffee/lib/lib.coffee","/Users/user/NooraHealth/online-curriculum/public/coffee/models/LessonModel.coffee"]);
