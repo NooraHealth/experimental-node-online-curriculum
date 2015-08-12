@@ -10,12 +10,15 @@ var coffee = require('coffee-script').register();
 var config = require('./oauth.js');
 var passport = require('passport');
 var session = require('express-session');
+var passportLocalMongoose = require('passport-local-mongoose');
+var jquery = require('jquery');
 
 //connect to MongoDB
 mongoose.connect(process.env.MONGO_URL);
 
 //MODELS
 var User = require('./models/User.coffee');
+
 // prints out all users in the database 
 User.find({}, function(err, users) {
   var userMap = {};

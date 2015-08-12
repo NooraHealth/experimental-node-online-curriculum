@@ -6,6 +6,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var User = require('./models/User.coffee')
 var config = require('./oauth.js')
+var LocalStrategy = require('passport-local').Strategy;
 
 module.exports = passport.use(new FacebookStrategy({
   clientID: config.facebook.clientID,
@@ -84,3 +85,5 @@ function(accessToken, refreshToken, profile, done) {
     };
   });
 }));
+
+passport.use(User.createStrategy());
