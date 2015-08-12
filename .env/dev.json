@@ -1,6 +1,10 @@
 {
-  "MONGO_URL":"mongodb://lucy:artichokes@c312.lighthouse.2.mongolayer.com:10312,lighthouse.3.mongolayer.com:10311/dev?replicaSet=set-555b94436b0733dec5001b44", 
-  "HOST":"localhost:3000",
+  "MONGO_URL":"mongodb://vicki:noorahealth@c312.lighthouse.2.mongolayer.com:10312,lighthouse.3.mongolayer.com:10311/dev?replicaSet=set-555b94436b0733dec5001b44", 
+  "HOST":"http://localhost:3000",
   "NODE_ENV":"dev",
-  "PORT": 3000
+  "PORT": 3000,
+  "FACEBOOK_CLIENT_ID":"1107741305920300",
+  "FACEBOOK_CLIENT_SECRET":"f4a1f0e59225626a82dbafa763f19737",
+  "GOOGLE_CLIENT_ID":"85290044543-5akd26m7dp4v7s7bng0ddbhb2ol71d0o.apps.googleusercontent.com",
+  "GOOGLE_CLIENT_SECRET":"kdtoNVpNgHXT0qWltEYKZzpA"
 }

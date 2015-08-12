@@ -1,3 +1,4 @@
+var fs = require('fs');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,22 +7,35 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var coffee = require('coffee-script').register();
+var config = require('./oauth.js');
+var passport = require('passport');
+var session = require('express-session');
+var passportLocalMongoose = require('passport-local-mongoose');
+var jquery = require('jquery');
 
-//AUTHENTICATION
-var fbAuth = require('./authentication.js')
-var GoogleStrategy = require('passport-google').Strategy;
-var FacebookStrategy = require('passport-facebook').Strategy;
-
-//ROUTER
-var routes = require('./routes/router.js');
+//connect to MongoDB
+mongoose.connect(process.env.MONGO_URL);
 
 //MODELS
 var User = require('./models/User.coffee');
 
-var app = express();
+// prints out all users in the database 
+User.find({}, function(err, users) {
+  var userMap = {};
+  users.forEach(function(user) {
+    userMap[user._id] = user;
+  });
+  console.log("All users in database: ");
+  console.log(userMap);
+});
 
-//connect to MongoDB
-mongoose.connect(process.env.MONGO_URL);
+//AUTHENTICATION
+var auth = require('./authentication.js')
+
+//ROUTER
+var routes = require('./routes/router.js');
+
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +47,28 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({ 
+  resave: true,
+  saveUninitialized: true,
+  secret: "Noora Health users",
+  maxAge: 6000
+}));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+app.use(passport.session());
+
+// seralize and deseralize
+passport.serializeUser(function(user, done) {
+    console.log('serializeUser: ' + user._id)
+    done(null, user._id);
+});
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user){
+        console.log(user);
+        if(!err) done(null, user);
+        else done(err, null);
+    })
+});
 
 //Routes
 app.use('/', routes);
