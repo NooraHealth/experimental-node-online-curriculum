@@ -9,9 +9,19 @@ Lib = require '../lib/lib.coffee'
 App = require '../App.coffee'
 LessonModel = require '../models/LessonModel.coffee'
 
-class LessonSeries
+class LessonSeries extends Node
+  constructor: ()->
+    super
+
+    @.setOrigin .5, .5, 0
+      .setMountPoint .5, .5, .5
+      .setAlign .5 , .5 , .5
+      .setSizeMode 'absolute', 'absolute', 'absolute'
+      .setAbsoluteSize 50, 50, 50
+
 class LessonThumbnail extends Node
   constructor: ()->
+    super
 
     @.setOrigin .5, .5, 0
       .setMountPoint .5, .5, .5
@@ -20,6 +30,7 @@ class LessonThumbnail extends Node
       .setAbsoluteSize 50, 50, 50
 
     @.domElement = new DOMElement @, {
+     
 
     }
 

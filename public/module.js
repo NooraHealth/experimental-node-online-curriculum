@@ -25638,7 +25638,10 @@ LessonModel = require('../models/LessonModel.coffee');
 LessonThumbnail = (function(superClass) {
   extend(LessonThumbnail, superClass);
 
-  function LessonThumbnail() {}
+  function LessonThumbnail() {
+    this.setOrigin(.5, .5, 0).setMountPoint(.5, .5, .5).setAlign(.5, .5, .5).setSizeMode('absolute', 'absolute', 'absolute').setAbsoluteSize(50, 50, 50);
+    this.domElement = new DOMElement(this, {});
+  }
 
   return LessonThumbnail;
 
