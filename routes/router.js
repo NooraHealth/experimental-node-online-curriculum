@@ -38,7 +38,7 @@ router.get('/register', function(req, res, next) {
 /* POST register*/
 router.post('/register', function(req, res, next) {
   console.log('registering user, email is ' + req.body.email + ' password is ' + req.body.password);
-  User.register(new User({ email : req.body.email, password: req.body.password, created : Date.now()}), req.body.password, function(err) {
+  User.register(new User({ email : req.body.email, created : Date.now()}), req.body.password, function(err) {
     if (err) {
       console.log('error while registering user', err);
       return next(err);

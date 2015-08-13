@@ -25649,6 +25649,61 @@ lc = new LessonThumbnail();
 module.exports = lc;
 
 
+},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","../models/LessonModel.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/models/LessonModel.coffee","famous/core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Sphere.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/Lessons.coffee":[function(require,module,exports){
+var App, DOMElement, FamousEngine, LessonModel, LessonSeries, LessonThumbnail, Lib, Node, Physics, Sphere, Spring, Vec3, lc,
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
+
+FamousEngine = require('famous/core/FamousEngine');
+
+Node = require('famous/core/Node');
+
+Physics = require('famous/physics');
+
+DOMElement = require('famous/dom-renderables/DOMElement');
+
+Sphere = require('famous/physics/bodies/Sphere');
+
+Spring = Physics.Spring;
+
+Vec3 = require('famous/math/Vec3');
+
+Lib = require('../lib/lib.coffee');
+
+App = require('../App.coffee');
+
+LessonModel = require('../models/LessonModel.coffee');
+
+LessonSeries = (function(superClass) {
+  extend(LessonSeries, superClass);
+
+  function LessonSeries() {
+    LessonSeries.__super__.constructor.apply(this, arguments);
+    this.setOrigin(.5, .5, 0).setMountPoint(.5, .5, .5).setAlign(.5, .5, .5).setSizeMode('absolute', 'absolute', 'absolute').setAbsoluteSize(50, 50, 50);
+  }
+
+  return LessonSeries;
+
+})(Node);
+
+LessonThumbnail = (function(superClass) {
+  extend(LessonThumbnail, superClass);
+
+  function LessonThumbnail() {
+    LessonThumbnail.__super__.constructor.apply(this, arguments);
+    this.setOrigin(.5, .5, 0).setMountPoint(.5, .5, .5).setAlign(.5, .5, .5).setSizeMode('absolute', 'absolute', 'absolute').setAbsoluteSize(50, 50, 50);
+    this.domElement = new DOMElement(this, {});
+  }
+
+  return LessonThumbnail;
+
+})(Node);
+
+lc = new LessonThumbnail();
+
+module.exports = lc;
+
+
 },{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","../lib/lib.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","../models/LessonModel.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/models/LessonModel.coffee","famous/core/FamousEngine":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/FamousEngine.js","famous/core/Node":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/core/Node.js","famous/dom-renderables/DOMElement":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/dom-renderables/DOMElement.js","famous/math/Vec3":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/math/Vec3.js","famous/physics":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/index.js","famous/physics/bodies/Sphere":"/Users/vickilau/GitHub/online-curriculum/node_modules/famous/physics/bodies/Sphere.js"}],"/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/SpinnerNode.coffee":[function(require,module,exports){
 var App, DOMElement, FamousEngine, Lib, Node, SpinnerNode, Vec3,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
@@ -25859,4 +25914,4 @@ model = new LessonModel();
 module.exports = model;
 
 
-},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee"}]},{},["/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/ColoredSphere.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/Header.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/LessonThumbnail.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/SpinnerNode.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/init.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/models/LessonModel.coffee"]);
+},{"../App.coffee":"/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee"}]},{},["/Users/vickilau/GitHub/online-curriculum/public/coffee/App.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/ColoredSphere.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/Header.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/LessonThumbnail.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/Lessons.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/controllers/SpinnerNode.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/init.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/lib/lib.coffee","/Users/vickilau/GitHub/online-curriculum/public/coffee/models/LessonModel.coffee"]);
