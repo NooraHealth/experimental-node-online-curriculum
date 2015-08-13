@@ -1,0 +1,18 @@
+<p>REGISTER PAGE</p>
+ <p>Please register for a Noora Health account.</p>
+ <a class='btn' href='/auth/facebook'>Register with Facebook</a>
+ <a class='btn' href="/auth/google">Register with Google</a>
+ 
+ <form action='/register' method='post'>
+   <div class='row form-row'>
+     <label>Email</label>
+     <input type='email' id='email' name='email'>
+   </div>
+   <div class='row form-row'>
+     <label>Password</label>
+     <input type='password' id='password' name='password'>
+   </div>
+   <input type='submit' class='btn' value='Register'>
+ </form>
+ 
+<p>Already have an account? <a href='/login'>Login</a></p>
