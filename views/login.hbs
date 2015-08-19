@@ -1,18 +1,20 @@
-<p>LOGIN PAGE</p>
-<p>Please log in to your Noora Health account.</p>
-<a class='btn' href='/auth/facebook'>Login in with Facebook</a>
-<a class='btn' href="/auth/google">Login in with Google</a>
+<div class="container">
+  <div class="row"><img src="/images/NHlogo.png"></div>
+  <p>Please log in to your Noora Health account.</p>
+  <a class="btn" href="/auth/facebook">Login in with Facebook</a>
+  <a class="btn" href="/auth/google">Login in with Google</a>
 
-<form action='/login' method='post'>
-  <div class='row form-row'>
-    <label>Email</label>
-    <input type='email' id='email' name='email'>
-  </div>
-  <div class='row form-row'>
-    <label>Password</label>
-    <input type='password' id='password' name='password'>
-  </div>
-  <input type='submit' class='btn' value='Login'>
-</form>
+  <form action="/login" method="post">
+    <div class="row form-row">
+      <label>Email</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div class="row form-row">
+      <label>Password</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <input type="submit" class="btn" value="Login">
+  </form>
 
-<p>Don't have an account? <a href='/register'>Register</a></p>
+  <p>Don"t have an account? <a href="/register">Register</a></p>
+</div>

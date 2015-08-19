@@ -31,7 +31,8 @@ module.exports = (grunt) ->
     browserify:
       dist:
         files:
-          'public/module.js':['public/**/*.coffee']
+          'public/module.js':['public/**/*.coffee'],
+          'public/register.js':['public/coffee/views/register.coffee']
         options:
           transform: ['coffeeify']
           watch: true

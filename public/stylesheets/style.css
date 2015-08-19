@@ -43,3 +43,7 @@ nav {
 
 .dom-element {
   pointer-events: none; }
+
+.error-message {
+  color: red;
+}

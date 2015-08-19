@@ -11,7 +11,6 @@ var config = require('./oauth.js');
 var passport = require('passport');
 var session = require('express-session');
 var passportLocalMongoose = require('passport-local-mongoose');
-var jquery = require('jquery');
 
 //connect to MongoDB
 mongoose.connect(process.env.MONGO_URL);
