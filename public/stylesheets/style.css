@@ -43,11 +43,3 @@ nav {
 
 .dom-element {
   pointer-events: none; }
-
-.noora-logo {
-  padding-top: 20px;
-}
-
-.error-message {
-  font: red;
-}
