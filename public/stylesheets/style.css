@@ -45,5 +45,10 @@ nav {
   pointer-events: none; }
 
 .error-message {
-  color: red;
+  color: red
 }
+
+.noora-logo {
+  padding-top: 20px;
+}
+

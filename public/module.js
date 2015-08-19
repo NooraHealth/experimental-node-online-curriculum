@@ -25920,7 +25920,6 @@ var RegisterPage;
 RegisterPage = (function() {
   function RegisterPage() {
     var confirmPassword, password;
-    console.log("constructed register page object");
     password = document.getElementById("password");
     confirmPassword = document.getElementById("confirm-password");
     password.addEventListener('keyup', this.checkPassword);
@@ -25956,7 +25955,6 @@ RegisterPage = (function() {
 
 window.onload = function() {
   var registerPage;
-  console.log("RegisterPage");
   return registerPage = new RegisterPage();
 };
 
