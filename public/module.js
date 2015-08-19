@@ -25932,7 +25932,7 @@ RegisterPage = (function() {
     confirmPassword = document.getElementById("confirm-password");
     errorMessage = document.getElementById("error-message");
     buttonActivate = document.getElementById("button-activate");
-    if (password.value.length > 5 && confirmPassword.value.length > 5) {
+    if (password.value.length > 5) {
       errorMessage.innerHTML = "";
       if (password.value !== confirmPassword.value) {
         errorMessage.innerHTML = "Passwords do not match";
