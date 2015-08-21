@@ -40,6 +40,7 @@
     "browserify-shim": "^3.8.10",
     "grunt-sass": "^1.0.0",
     "node-bourbon": "^4.2.3",
-    "grunt-phonegap": "~0.15.2"
+    "grunt-phonegap": "~0.15.2",
+    "grunt-contrib-compress": "~0.13.0"
   }
 }

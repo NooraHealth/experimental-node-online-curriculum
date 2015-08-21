@@ -80,4 +80,13 @@ router.get('/auth/google/callback',
     res.redirect('/');
   });
 
+/* GET Phonegap authentication callback */
+router.get('/auth/phonegap/callback', 
+  function(req, res) {
+    console.log("In the phonegap callback");
+    console.log(res);
+    console.log(req);
+  }
+);
+
 module.exports = router;

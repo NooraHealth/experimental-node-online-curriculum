@@ -10,6 +10,23 @@ module.exports = (grunt) ->
       prod:
         src: '.env/production.json'
 
+    compress:
+
+    phonegap:
+      dev:
+        options:
+          archive: "app.zip"
+          appId: process.env.PHONEGAP_APP_ID
+          user:
+            email: process.env.PHONEGAP_EMAIL
+            password: process.env.PHONEGAP_PASSWORD
+
+      prod:
+        options:
+          appId: process.env.PHONEGAP_APP_ID
+          user:
+            token: process.env.PHONEGAP_TOKEN
+
     sass:
       options:
         includePaths: require('node-bourbon').includePaths
@@ -51,7 +68,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-phonegap'
+  grunt.loadNpmTasks 'grunt-contrib-compress'
 
+  grunt.registerTask "phonegap-dev", ['env:dev', 'compress', 'phonegap:dev']
+  grunt.registerTask "phonegap-prod", ['env:prod', 'compress', 'phonegap:prod']
   grunt.registerTask 'default', ['sass', 'browserify', 'env:dev', 'nodemon']
   grunt.registerTask 'production', ['env:prod', 'nodemon']
   grunt.registerTask 'build:dev', ['env:dev']
