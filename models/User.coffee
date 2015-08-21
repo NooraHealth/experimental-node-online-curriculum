@@ -10,13 +10,13 @@ userSchema = {
   name: String,
   created: Date,
   email: String,
-  password: String
 }
 
 UserSchema = new Schema userSchema
 
-options =
-  usernameField: 'email'
+options = {
+  usernameField: 'email',
+}
 
 UserSchema.plugin passportLocalMongoose, options
 

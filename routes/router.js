@@ -6,11 +6,11 @@ var User = require('../models/User.coffee');
 // test authentication
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
-  res.redirect('/');
+  res.redirect('/login');
 }
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', ensureAuthenticated, function(req, res, next) {
   res.render('index', { title: 'Noora Health' });
 });
 
@@ -25,8 +25,6 @@ router.get('/login', function(req, res, next) {
 
 /* POST login */
 router.post('/login', passport.authenticate('local'), function(req, res) {
-    console.log(req.user.email);
-    console.log(" is logged in");
     res.redirect('/');
   });
 
@@ -37,14 +35,14 @@ router.get('/register', function(req, res, next) {
 
 /* POST register*/
 router.post('/register', function(req, res, next) {
-  console.log('registering user, email is ' + req.body.email + ' password is ' + req.body.password);
-  User.register(new User({ email : req.body.email, created : Date.now()}), req.body.password, function(err) {
+  User.register(new User({ email : req.body.email, password: req.body.password, created : Date.now()}), req.body.password, function(err) {
     if (err) {
       console.log('error while registering user', err);
       return next(err);
     }
-    console.log('user registered');
-    res.redirect('/');
+    passport.authenticate('local')(req, res, function() {
+      res.redirect('/');
+    });
   });
 });
 

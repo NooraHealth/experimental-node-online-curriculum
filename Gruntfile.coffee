@@ -23,6 +23,7 @@ module.exports = (grunt) ->
       dist:
         files:
           'build/module.js':['public/**/*.coffee']
+          'build/register.js':['public/coffee/views/register.coffee']
         options:
           transform: ['coffeeify']
           watch: true
