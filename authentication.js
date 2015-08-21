@@ -13,6 +13,7 @@ module.exports = passport.use(new FacebookStrategy({
   clientSecret: config.facebook.clientSecret,
   callbackURL: config.facebook.callbackURL
 },
+
 function(accessToken, refreshToken, profile, done) {
   console.log("accessToken is: " + accessToken);
   console.log("refreshToken is: " + refreshToken);
@@ -51,6 +52,7 @@ passport.use(new GoogleStrategy({
   clientSecret: config.google.clientSecret,
   callbackURL: config.google.callbackURL
 },
+
 function(accessToken, refreshToken, profile, done) {
   console.log("accessToken is: " + accessToken);
   console.log("refreshToken is: " + refreshToken);

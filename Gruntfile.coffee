@@ -15,29 +15,20 @@ module.exports = (grunt) ->
         includePaths: require('node-bourbon').includePaths
       dist:
         files:
-          'public/stylesheets/style.css':'public/stylesheets/scss/style.scss'
+          'public/stylesheets/style.css':'build/stylesheets/scss/style.scss'
 
-    coffee:
-      glob_to_multiple:
-        expand: true
-        flatten: true
-        cwd: 'public/coffee/'
-        src: ['*.coffee']
-        dest: 'public/javascripts/'
-        ext: ".js"
-
-    clean: ['public/module.js']
+    clean: ['build/**/*']
 
     browserify:
       dist:
         files:
-          'public/module.js':['public/**/*.coffee']
+          'build/module.js':['public/**/*.coffee']
         options:
           transform: ['coffeeify']
           watch: true
           #keepAlive: true
           watchifyOptions:
-            outFile: 'public/module.js'
+            outFile: 'build/module.js'
             verbose:true
 
     nodemon:
@@ -58,6 +49,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-watchify'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-phonegap'
 
   grunt.registerTask 'default', ['sass', 'browserify', 'env:dev', 'nodemon']
   grunt.registerTask 'production', ['env:prod', 'nodemon']

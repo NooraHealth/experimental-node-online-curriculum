@@ -21,8 +21,6 @@
     "grunt-env": "^0.4.4",
     "grunt-nodemon": "^0.4.0",
     "grunt-watchify": "^0.1.0",
-    "grunt": "^0.4.5",
-    "grunt-nodemon": "^0.4.0",
     "hbs": "~3.1.0",
     "jquery": "^2.1.4",
     "mongoose": "^4.1.2",
@@ -33,11 +31,13 @@
     "passport-google-oauth": "^0.2.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^1.0.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "simple-logger": "~1.0.1"
   },
   "devDependencies": {
     "beefy": "^2.1.5",
     "grunt-sass": "^1.0.0",
-    "node-bourbon": "^4.2.3"
+    "node-bourbon": "^4.2.3",
+    "grunt-phonegap": "~0.15.2"
   }
 }
