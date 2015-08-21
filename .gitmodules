@@ -1,3 +1,6 @@
 [submodule "phonegap-online-curriculum"]
 	path = phonegap-online-curriculum
 	url = git@github.com:NooraHealth/phonegap-online-curriculum.git
+[submodule "phonegap_build"]
+	path = phonegap_build
+	url = git@github.com:NooraHealth/phonegap-online-curriculum.git
