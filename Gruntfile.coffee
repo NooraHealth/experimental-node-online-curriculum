@@ -15,7 +15,7 @@ module.exports = (grunt) ->
         includePaths: require('node-bourbon').includePaths
       dist:
         files:
-          'public/stylesheets/style.css':'build/stylesheets/scss/style.scss'
+          'build/stylesheets/style.css':'public/stylesheets/scss/style.scss'
 
     clean: ['build/**/*']
 
